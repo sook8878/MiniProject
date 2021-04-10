@@ -17,6 +17,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import gamePlay.MainFrame;
+
 public class chap03Talk8 extends JFrame {
 	
 	public chap03Talk8() {
@@ -68,7 +70,7 @@ public class chap03Talk8 extends JFrame {
 		talkBackGround.setBounds(20, 340, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel("<html>도둑고양이 : 야옹~</html>");
+		JLabel talk = new JLabel("<html>도둑고양이 : 키야옹~</html>");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 
@@ -107,8 +109,12 @@ public class chap03Talk8 extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				chap03Talk8.this.dispose();
+				// 고양이 게임 실행
+				MainFrame catgame = new MainFrame();
 			}
 		});
+		
+		
 
 		// 프레임 설정
 		this.setVisible(true);

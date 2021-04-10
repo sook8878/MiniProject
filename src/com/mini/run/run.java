@@ -12,7 +12,7 @@ public class run {
 		
 //		new chap02Narration1();
 			
-//		new chap03Narration1();
+		new chap03Narration1();
 		
 //		new chap04Narration1();
 		
