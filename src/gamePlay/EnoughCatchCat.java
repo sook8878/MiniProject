@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
+import com.mini.view.chap04Narration1;
+
 public class EnoughCatchCat extends JFrame {
 	public EnoughCatchCat() {
 	      
@@ -14,6 +16,7 @@ public class EnoughCatchCat extends JFrame {
 	      
 	      JOptionPane.showMessageDialog(null, EnoughCatchCat,"성공!!!!",JOptionPane.INFORMATION_MESSAGE);
 	      // 호감도 ++
+	      new chap04Narration1();
 
 	     
 

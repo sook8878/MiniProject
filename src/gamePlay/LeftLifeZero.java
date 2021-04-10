@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
+import com.mini.view.chap04Narration1;
+
 public class LeftLifeZero extends JFrame{
 	
 	public LeftLifeZero() {
@@ -15,6 +17,7 @@ public class LeftLifeZero extends JFrame{
 	      
 	       JOptionPane.showMessageDialog(null, BeforeGame,"실패 ㅜㅜ",JOptionPane.ERROR_MESSAGE);
 	       // 주인공 사망///
+	       new chap04Narration1();
 
 
 }

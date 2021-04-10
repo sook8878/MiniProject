@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
+import com.mini.view.chap04Narration1;
+
 public class TimeEnd extends JFrame{
 	
 	public TimeEnd() {
@@ -15,6 +17,7 @@ public class TimeEnd extends JFrame{
 	      
 		      
 		JOptionPane.showMessageDialog(null, TimeEnd,"실패 ㅠㅠ",JOptionPane.ERROR_MESSAGE);
+		new chap04Narration1();
 
 
 }

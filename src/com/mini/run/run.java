@@ -15,9 +15,7 @@ public class run {
 			
 		new chap03Narration1();
 		
-//		new chap04Narration1();
-		
-		new badEnd();
+//		new badEnd();
 		
 	}
 }
