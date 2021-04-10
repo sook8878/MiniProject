@@ -83,22 +83,10 @@ public class badEnd extends JFrame {
 		Image nextImg = new ImageIcon("image/next.png").getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH);
 		JLabel next = new JLabel(new ImageIcon(nextImg));
 
-//		Timer timer = new Timer();
-//		TimerTask timerTask = new TimerTask() {
-//
-//			@Override
-//			public void run() {
-//				
-//				next.setBounds(750, 150, 150, 80);
-//				talkBackGround.add(next);
-//				System.out.println("==");
-//
-//			}
-//		};
-//
-//		timer.schedule(timerTask, 1000);
-		
+		// 하단 다음 이미지의 크기, 위치 조정
 		next.setBounds(750, 150, 150, 80);
+		
+		// 하단 대화 테두리의 다음 이미지 추가
 		talkBackGround.add(next);
 
 		// panel에 추가
