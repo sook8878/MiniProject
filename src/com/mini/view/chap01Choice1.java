@@ -17,6 +17,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import gamePlay.CardGame;
+import gamePlay.CardGame.GameFrame;
+
 public class chap01Choice1 extends JFrame {
 
 	public chap01Choice1() {
@@ -100,6 +103,8 @@ public class chap01Choice1 extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				chap01Choice1.this.dispose();
 				//미니게임 gui 호출
+				CardGame.startView(); //시작팝업
+				GameFrame game = new GameFrame("시뮬레이션");
 			}
 
 		});
@@ -115,7 +120,7 @@ public class chap01Choice1 extends JFrame {
 
 			public void mouseClicked(MouseEvent e) {
 				chap01Choice1.this.dispose();
-				//미니게임 gui 호출
+				//게임실행x
 			}
 
 		});
@@ -132,6 +137,8 @@ public class chap01Choice1 extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				chap01Choice1.this.dispose();
 				//미니게임 gui 호출
+				CardGame.startView(); //시작팝업
+				GameFrame game = new GameFrame("시뮬레이션");
 			}
 
 		});

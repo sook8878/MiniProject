@@ -86,7 +86,7 @@ public class chap01Talk1 extends JFrame {
 		JLabel next = new JLabel(new ImageIcon(nextImg));
 
 //		// 하단 다음 이미지의 크기, 위치 조정
-//		next.setBounds(750, 150, 150, 80);
+		next.setBounds(750, 150, 150, 80);
 		
 //		Timer timer = new Timer();
 //		TimerTask timerTask = new TimerTask() {
@@ -110,7 +110,7 @@ public class chap01Talk1 extends JFrame {
 		pan.add(talkBackGround);
 
 //		// 하단 대화 테두리에 다음 이미지 추가
-//		talkBackGround.add(next);
+		talkBackGround.add(next);
 
 		// 프레임 판넬 추가
 		this.add(pan, "Center");

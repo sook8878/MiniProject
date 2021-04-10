@@ -9,11 +9,11 @@ import com.mini.view.chap04Narration1;
 public class run {
 	public static void main(String[] args) {
 		
-//		new FristMain();
+		new FristMain();
 		
 //		new chap02Narration1();
 			
-		new chap03Narration1();
+//		new chap03Narration1();
 		
 //		new badEnd();
 		
