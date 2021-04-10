@@ -121,6 +121,7 @@ public class chap01Choice1 extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				chap01Choice1.this.dispose();
 				//게임실행x
+			    new chap02Narration1(); //챕터2로 바로 이동
 			}
 
 		});
