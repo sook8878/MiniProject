@@ -22,6 +22,7 @@ import javax.swing.JTextField;
 public class SecondMain extends JFrame {
 	
 	private int stage = 0;
+	private int lovePoint = 50;
 
 	// 두번째 화면 
 	public SecondMain() {

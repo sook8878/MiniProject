@@ -19,8 +19,10 @@ import javax.swing.JPanel;
 
 public class chap04Talk5 extends JFrame {
 	
+	private int stage = 0;
+	private int lovePoint = 50;
+	
 	String name = "oo";
-	int lovePoint = 10;
 
 	public chap04Talk5() {
 
@@ -48,12 +50,27 @@ public class chap04Talk5 extends JFrame {
 		// 상단의 이미지 크기, 위치 조정
 		person.setBounds(5, 20, 1000, 300);
 
+		String img = "";
+
+		if (lovePoint >= 80) {
+			
+			img = "image/loveBar3.png";
+
+		} else if (lovePoint >= 50) {
+
+			img = "image/loveBar2.png";
+		} else {
+			
+			img = "image/loveBar1.png";
+		}
+		
 		// 상단 호감도 표시
-		Image loveBarImg = new ImageIcon("image/loveBar.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+		Image loveBarImg = new ImageIcon(img).getImage();
+		loveBarImg.getScaledInstance(130, 330, Image.SCALE_SMOOTH);
 		JLabel loveBar = new JLabel(new ImageIcon(loveBarImg));
 
 		// 상단 호감도 표시 크기, 위치 조정
-		loveBar.setBounds(10, 0, 50, 50);
+		loveBar.setBounds(10, 1, 130, 330);
 
 		// 상단 오른쪽 프로그램 종료 버튼
 		Image closeImg = new ImageIcon("image/close.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
