@@ -20,6 +20,8 @@ import javax.swing.JTextField;
 
 
 public class SecondMain extends JFrame {
+	
+	private int stage = 0;
 
 	// 두번째 화면 
 	public SecondMain() {
@@ -75,6 +77,7 @@ public class SecondMain extends JFrame {
 				if(tf.getText().length() != 0) {
 					super.mouseClicked(e);
 					setVisible(false);
+					stage++;
 					new chap01Narration1();
 				} else {
 					JOptionPane.showMessageDialog(null, "이름을 입력하세요");
