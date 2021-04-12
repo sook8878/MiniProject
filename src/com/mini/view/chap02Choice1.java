@@ -17,6 +17,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import gamePlay.NumberGame;
+
 public class chap02Choice1 extends JFrame {
 
 	public chap02Choice1() {
@@ -134,6 +136,7 @@ public class chap02Choice1 extends JFrame {
 				lovePoint += 10; //호감도 증가하는 값 일단 임의로 그냥 넣음 나중에 수정해야함
 				
 				// 현우오빠 게임 부르기
+				new NumberGame(name, stage2, lovePoint);
 			}
 
 		});
