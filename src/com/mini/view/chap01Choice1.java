@@ -18,6 +18,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import gamePlay.CardGame;
+import gamePlay.CardGameMoveChap;
 import gamePlay.CardGame.GameFrame;
 
 public class chap01Choice1 extends JFrame {
