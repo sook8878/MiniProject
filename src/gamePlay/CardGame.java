@@ -58,12 +58,13 @@ public class CardGame extends JFrame {
 	static Dialog success;
 	static JLabel message;
 	static JButton ok;
+	static int moveChap = 0; 
 	
 	/* 게임프레임 설정, 카드버튼 기능 설정 */
 	public static class GameFrame extends JFrame implements ActionListener{
 		
-		public GameFrame(String Title) { //게임프레임 설정
-			super(Title);
+		public GameFrame(String name, int stage, int lovePoint) { //게임프레임 설정
+			this.setTitle("시뮬레이션");
 			this.setSize(1000, 680); //프레임 크기
 			this.setLayout(null); //위치를 직접 지정해서 배치
 			this.setResizable(false); //창 크기 변경 불가
@@ -72,9 +73,19 @@ public class CardGame extends JFrame {
 		    gameUI(this);
 		    
 		    mixCard(); //카드를 랜덤하게 섞음
-			
+		    
+		    if(moveChap == 1) { //게임성공시
+		    	lovePoint += 20;
+		    	new chap02Narration1(name, stage, lovePoint); //호감도 증가 후 이동
+		    	
+		    } else if (moveChap == 2) { //게임실패시
+		    	lovePoint -= 20;
+		    	new chap02Narration1(name, stage, lovePoint); //호감도 감소 후 이동
+		    } 
+		    
 			this.setVisible(true); //화면이 보여지도록
 			this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //닫으면 깔끔히 종료
+
 		}
 
 		public int getButtonIndex(JButton btn) { //몇 번째 버튼이 눌렸는지 확인
@@ -121,7 +132,7 @@ public class CardGame extends JFrame {
 						playTimer.cancel(); //타이머 종료시킴
 						successView(); //성공 팝업창
 						this.dispose(); //게임프레임 종료
-					    new chap02Narration1();
+						moveChap = 1;
 					}
 				} 
 				else {
@@ -240,7 +251,7 @@ public class CardGame extends JFrame {
 					playTimer.cancel(); //타이머 종료시킴
 					failView(); //실패 팝업창
 					gameframe.dispose();
-				    new chap02Narration1();
+					moveChap = 2;
 				}
 			}
 		};

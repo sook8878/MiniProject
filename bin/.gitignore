@@ -1,2 +1,5 @@
 /com/
+/connection-info.properties
 /gamePlay/
+/log4j.xml
+/log4jdbc.log4j2.properties
