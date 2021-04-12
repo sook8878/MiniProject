@@ -105,6 +105,11 @@ public class chap01Talk4 extends JFrame {
 		String stageNum = String.valueOf(stage);
 		JLabel test = new JLabel(stageNum);
 		test.setVisible(false);
+		
+		// 매개변수로 전달받은 호감도 넘겨주기 위한 작업
+		String lovePointNum = String.valueOf(lovePoint);
+		JLabel lovePointLabel = new JLabel(lovePointNum);
+		lovePointLabel.setVisible(false);
 
 		// panel에 추가
 		pan.add(person);
@@ -112,6 +117,7 @@ public class chap01Talk4 extends JFrame {
 		pan.add(closewords);
 		pan.add(talkBackGround);
 		pan.add(test);
+		pan.add(lovePointLabel);
 
 		// 하단 대화 테두리에 다음 이미지 추가
 		talkBackGround.add(next);
