@@ -7,5 +7,7 @@ public class run {
 		
 		new FristMain();
 		
+//		new rankList();
+		
 	}
 }

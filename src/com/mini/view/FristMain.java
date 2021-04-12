@@ -74,6 +74,24 @@ public class FristMain extends JFrame {
 		JLabel rankWords = new JLabel(new ImageIcon(rankImg));
 		rankWords.setSize(300, 300);
 		rankWords.setLocation(80, 390);
+		
+		
+		// rankList로 넘어가기 위함.
+				rankWords.addMouseListener(new MouseAdapter() {
+
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						
+						super.mouseClicked(e);
+						new rankList();
+						setVisible(false);
+					}
+					
+					
+				});
+				
+		
+	
 
 		// 닫기
 		Image closeImg = new ImageIcon("image/close.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);

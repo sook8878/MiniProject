@@ -3,20 +3,19 @@ package com.mini.view;
 
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.Graphics;
 import java.awt.Image;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+
+import com.mini.controller.UserController;
 
 
 public class SecondMain extends JFrame {
@@ -24,6 +23,9 @@ public class SecondMain extends JFrame {
 	private int stage = 0;
 	private int lovePoint = 50;
 	private String name = "";
+	
+	// 주영이가 추가함. 컨트롤러 넘기기 위함.
+	private UserController usercontrller = new UserController();
 
 	// 두번째 화면 
 	public SecondMain() {
@@ -78,7 +80,9 @@ public class SecondMain extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				if(tf.getText().length() != 0) {
 					super.mouseClicked(e);
+					new UserController().saveUser(tf.getText());
 					setVisible(false);
+					
 					stage++;
 					name = tf.getText();
 					

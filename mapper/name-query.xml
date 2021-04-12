@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
- 		
+ 	 <entry key="insertuser">
+ 	     INSERT
+ 	       INTO USER_INFORMATION
+ 	     (
+ 	       USERNAME
+ 	     , PLAYDATE
+ 	     , STAGE
+ 	     , HEART
+ 	     , NUMBER_ID
+ 	     )
+ 	     VALUES
+ 	     (
+ 	       ?
+ 	     , SYSDATE
+ 	     , ?
+ 	     , ?
+ 	     , SEQ_NUMBER_ID.NEXTVAL
+ 	     )
+ 	       
+ 	 </entry>
+ 	 <entry key="selectUserId">
+ 	 	SELECT SEQ_NUMBER_ID.CURRVAL
+ 	 	  FROM DUAL
+ 	 </entry>
+ 	 
+ 	 <entry key="selectuser">
+ 	 	
+         SELECT 
+ 	 	       USERNAME
+           FROM USER_INFORMATION 
+          WHERE NUMBER_ID = ?
+                           
+ 	 </entry>
+ 	 
+ 	 <entry key="selecealluser">
+ 	 	SELECT 
+ 	 	      USERNAME
+ 	 	     ,PLAYDATE
+ 	 	     ,STAGE
+ 	 	     ,HEART
+ 	 	     ,NUMBER_ID
+ 	 	 FROM USER_INFORMATION
+ 	 	 ORDER BY HEART DESC
+ 	 </entry>
+ 	 
+ 	 
+ 	 <entry key="updateuser">
+        UPDATE 
+              USER_INFORMATION
+           SET STAGE = ?
+               HEART = ?
+         WHERE USERNAME = ? 	
+ 	 </entry>
     
 </properties>

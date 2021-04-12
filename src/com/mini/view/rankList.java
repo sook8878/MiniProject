@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import java.util.List;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -19,6 +20,9 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+
+import com.mini.controller.UserController;
+import com.mini.model.dto.GameInfotmationDTO;
 
 public class rankList extends JFrame {
 	
@@ -85,8 +89,22 @@ public class rankList extends JFrame {
 		rankTitle.setBounds(145, 10, 220, 50);
 		rankTitle.setFont(new Font("배달의민족 주아", Font.PLAIN, 50));
 		
+		
+		// 랭킹 allselect  하기 위함. // 주영이가 추가함 랭킹순위를 불러오기위함.
+	      
+	      List<GameInfotmationDTO> receviedUser = new UserController().rankAllUser();
+	      String [][] receviedData = new String [receviedUser.size()][4];
+	      for (int i =0; i<receviedUser.size(); i++) {
+	    	  receviedData[i][0] = String.valueOf(i+1);
+	    	  receviedData[i][1] = String.valueOf(receviedUser.get(i).getUsername());
+	    	  receviedData[i][2] = String.valueOf(receviedUser.get(i).getHeart());
+	    	  receviedData[i][3] = String.valueOf(receviedUser.get(i).getPlaydate());
+	      }
+	
+		
+		
 		// 랭킹의 출력 부분
-		DefaultTableModel model = new DefaultTableModel(data, columns);
+		DefaultTableModel model = new DefaultTableModel(receviedData, columns);
 		JTable table = new JTable(model);
 		table.setRowHeight(40);
 		
