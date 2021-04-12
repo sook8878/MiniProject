@@ -18,11 +18,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class chap02Choice1 extends JFrame {
-	
-	private int stage = 0;
-	private int lovePoint = 50;
 
 	public chap02Choice1() {
+
+	}
+
+	public chap02Choice1(int stage, int lovePoint) {
 
 		// 프레임 설정
 		this.setSize(1000, 680);
@@ -51,17 +52,17 @@ public class chap02Choice1 extends JFrame {
 		String img = "";
 
 		if (lovePoint >= 80) {
-			
+
 			img = "image/loveBar3.png";
 
 		} else if (lovePoint >= 50) {
 
 			img = "image/loveBar2.png";
 		} else {
-			
+
 			img = "image/loveBar1.png";
 		}
-		
+
 		// 상단 호감도 표시
 		Image loveBarImg = new ImageIcon(img).getImage();
 		loveBarImg.getScaledInstance(130, 330, Image.SCALE_SMOOTH);
@@ -85,13 +86,17 @@ public class chap02Choice1 extends JFrame {
 		// 하단에 선택지 테두리의 크기, 위치 조정
 		talkBackGround.setBounds(20, 340, 920, 270);
 
+		// 매개변수로 전달받은 스테이지 번호를 넘겨주기 위한 작업
+		String stageNum = String.valueOf(stage);
+		JLabel test = new JLabel(stageNum);
+		test.setVisible(false);
+
 		// 선택지 버튼
 		JButton choice1_btn = new JButton();
 		JButton choice2_btn = new JButton();
 
 		// 선택지 버튼의 라벨
-		JLabel choiec1_lb = new JLabel(
-				"<html>(벌떡 일어나서) 부장님!<br><br>신입사원인 제가 한잔 부장님 마지막 술 받아도 되겠습니까!?<br><br>저랑 한잔 하시죠!!!</html>");
+		JLabel choiec1_lb = new JLabel("<html>(벌떡 일어나서) 부장님!<br><br>신입사원인 제가 한잔 부장님 마지막 술 받아도 되겠습니까!?<br><br>저랑 한잔 하시죠!!!</html>");
 		JLabel choiec2_lb = new JLabel("<html>(나도 이미 많이 마셔서..)<br><br>선호를 안쓰럽게 쳐다보고 부장님이랑 눈을 마주치지 않는다.</html>");
 
 		// 선택지 버튼의 크기, 위치 조정
@@ -114,6 +119,12 @@ public class chap02Choice1 extends JFrame {
 
 			public void mouseClicked(MouseEvent e) {
 				chap02Choice1.this.dispose();
+				
+				String num = test.getText();
+				int stage = Integer.parseInt(num);
+				stage++;
+				
+				// 현우오빠 게임 부르기
 			}
 
 		});
@@ -129,6 +140,12 @@ public class chap02Choice1 extends JFrame {
 
 			public void mouseClicked(MouseEvent e) {
 				chap02Choice1.this.dispose();
+				
+				String num = test.getText();
+				int stage = Integer.parseInt(num);
+				stage++;
+				
+				new chap03Narration1(stage, lovePoint);
 			}
 
 		});
@@ -150,6 +167,7 @@ public class chap02Choice1 extends JFrame {
 		pan.add(loveBar);
 		pan.add(closewords);
 		pan.add(talkBackGround);
+		pan.add(test);
 
 		// 프레임 판넬 추가
 		this.add(pan, "Center");

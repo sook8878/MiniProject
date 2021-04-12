@@ -79,7 +79,7 @@ public class SecondMain extends JFrame {
 					super.mouseClicked(e);
 					setVisible(false);
 					stage++;
-					new chap01Narration1();
+					new chap01Narration1(stage, lovePoint);
 				} else {
 					JOptionPane.showMessageDialog(null, "이름을 입력하세요");
 				}

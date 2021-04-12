@@ -19,10 +19,11 @@ import javax.swing.JPanel;
 
 public class chap01Narration1 extends JFrame {
 	
-	private int stage = 0;
-	private int lovePoint = 50;
-
 	public chap01Narration1() {
+		
+	}
+
+	public chap01Narration1(int stage, int lovePoint) {
 
 		// 프레임 설정
 		this.setSize(1000, 680);
@@ -44,10 +45,10 @@ public class chap01Narration1 extends JFrame {
 		Image personImg = new ImageIcon("image/김선호.png").getImage();
 		personImg.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
 		JLabel person = new JLabel(new ImageIcon(personImg));
-
+		
 		// 상단의 이미지 크기, 위치 조정
 		person.setBounds(5, 20, 1000, 300);
-
+		
 		String img = "";
 
 		if (lovePoint >= 80) {
@@ -102,12 +103,18 @@ public class chap01Narration1 extends JFrame {
 
 		// 하단 다음 이미지의 크기, 위치 조정
 		next.setBounds(750, 150, 150, 80);
+		
+		// 매개변수로 전달받은 스테이지 번호를 넘겨주기 위한 작업 
+		String stageNum = String.valueOf(stage);
+		JLabel test = new JLabel(stageNum);
+		test.setVisible(false);
 
 		// panel에 추가
 		pan.add(person);
 		pan.add(loveBar);
 		pan.add(closewords);
 		pan.add(talkBackGround);
+		pan.add(test);
 
 		// 하단 대화 테두리에 다음 이미지 추가
 		talkBackGround.add(next);
@@ -125,10 +132,16 @@ public class chap01Narration1 extends JFrame {
 		
 		// 다음 버튼 이벤트 -> 화면 전환
 		next.addMouseListener(new MouseAdapter() {
+			
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				chap01Narration1.this.dispose();
-				new chap01Talk1();
+				
+				String num = test.getText();
+				int stage = Integer.parseInt(num);
+				stage++;
+				
+				new chap01Talk1(stage, lovePoint);
 			}
 		});
 

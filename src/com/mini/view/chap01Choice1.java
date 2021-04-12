@@ -22,10 +22,11 @@ import gamePlay.CardGame.GameFrame;
 
 public class chap01Choice1 extends JFrame {
 	
-	private int stage = 0;
-	private int lovePoint = 50;
-
 	public chap01Choice1() {
+		
+	}
+
+	public chap01Choice1(int stage, int lovePoint) {
 
 		// 프레임 설정
 		this.setSize(1000, 680);
@@ -87,6 +88,11 @@ public class chap01Choice1 extends JFrame {
 
 		// 하단에 선택지 테두리의 크기, 위치 조정
 		talkBackGround.setBounds(20, 340, 920, 270);
+		
+		// 매개변수로 전달받은 스테이지 번호를 넘겨주기 위한 작업 
+		String stageNum = String.valueOf(stage);
+		JLabel test = new JLabel(stageNum);
+		test.setVisible(false);
 
 		// 선택지 버튼
 		JButton choice1_btn = new JButton();
@@ -120,6 +126,11 @@ public class chap01Choice1 extends JFrame {
 
 			public void mouseClicked(MouseEvent e) {
 				chap01Choice1.this.dispose();
+				
+				String num = test.getText();
+				int stage = Integer.parseInt(num);
+				stage++;
+				
 				//미니게임 gui 호출
 				CardGame.startView(); //시작팝업
 				GameFrame game = new GameFrame("시뮬레이션");
@@ -138,8 +149,12 @@ public class chap01Choice1 extends JFrame {
 
 			public void mouseClicked(MouseEvent e) {
 				chap01Choice1.this.dispose();
-				//게임실행x
-			    new chap02Narration1(); //챕터2로 바로 이동
+				
+				String num = test.getText();
+				int stage = Integer.parseInt(num);
+				stage++;
+				
+			    new chap02Narration1(stage, lovePoint); //챕터2로 바로 이동
 			}
 
 		});
@@ -155,6 +170,11 @@ public class chap01Choice1 extends JFrame {
 
 			public void mouseClicked(MouseEvent e) {
 				chap01Choice1.this.dispose();
+				
+				String num = test.getText();
+				int stage = Integer.parseInt(num);
+				stage++;
+				
 				//미니게임 gui 호출
 				CardGame.startView(); //시작팝업
 				GameFrame game = new GameFrame("시뮬레이션");
@@ -182,6 +202,7 @@ public class chap01Choice1 extends JFrame {
 		pan.add(loveBar);
 		pan.add(closewords);
 		pan.add(talkBackGround);
+		pan.add(test);
 
 		// 프레임 판넬 추가
 		this.add(pan, "Center");
