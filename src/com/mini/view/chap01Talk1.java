@@ -149,7 +149,12 @@ public class chap01Talk1 extends JFrame {
 		closewords.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				new warning();
+				
+				String num = test.getText();
+				int stage1 = Integer.parseInt(num);
+				stage1++;
+				
+				new warning(stage1, lovePoint);
 			}
 		});
 
@@ -160,10 +165,10 @@ public class chap01Talk1 extends JFrame {
 				chap01Talk1.this.dispose();
 
 				String num = test.getText();
-				int stage = Integer.parseInt(num);
-				stage++;
+				int stage2 = Integer.parseInt(num);
+				stage2++;
 
-				new chap01Talk2(stage, lovePoint);
+				new chap01Talk2(stage2, lovePoint);
 			}
 		});
 

@@ -7,7 +7,9 @@ import javax.swing.JOptionPane;
 
 public class warning {
 	
-	public warning() {
+	public warning()
+	
+	public warning(int stage, int lovePoint) {
 		
 		JLabel warning = new JLabel("프로그램을 종료하시겠습니까?");
 		warning.setFont(new Font("배달의민족 주아", Font.PLAIN, 15));
