@@ -17,7 +17,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import gamePlay.MainFrame;
+import gamePlay.CatchCatGame;
 
 public class chap03Talk8 extends JFrame {
 
@@ -150,7 +150,7 @@ public class chap03Talk8 extends JFrame {
 				stage2++;
 				
 				// 고양이 게임 실행
-				MainFrame catgame = new MainFrame();
+				CatchCatGame catgame = new CatchCatGame(name,stage2,lovePoint);
 			}
 		});
 

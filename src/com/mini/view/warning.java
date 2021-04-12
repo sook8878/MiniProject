@@ -21,6 +21,7 @@ public class warning {
 		int result = JOptionPane.showConfirmDialog(null,warning,"경고문",JOptionPane.YES_NO_OPTION,JOptionPane.WARNING_MESSAGE);
 		
 		if(result == JOptionPane.YES_OPTION) {
+			
 			new UserController().savaStage(name,stage,lovePoint); 
 			System.out.println("YES");
 			System.exit(0);
