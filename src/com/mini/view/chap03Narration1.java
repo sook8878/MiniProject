@@ -18,11 +18,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class chap03Narration1 extends JFrame {
-	
-	private int stage = 0;
-	private int lovePoint = 50;
 
 	public chap03Narration1() {
+
+	}
+
+	public chap03Narration1(int stage, int lovePoint) {
 
 		// 프레임 설정
 		this.setSize(1000, 680);
@@ -51,17 +52,17 @@ public class chap03Narration1 extends JFrame {
 		String img = "";
 
 		if (lovePoint >= 80) {
-			
+
 			img = "image/loveBar3.png";
 
 		} else if (lovePoint >= 50) {
 
 			img = "image/loveBar2.png";
 		} else {
-			
+
 			img = "image/loveBar1.png";
 		}
-		
+
 		// 상단 호감도 표시
 		Image loveBarImg = new ImageIcon(img).getImage();
 		loveBarImg.getScaledInstance(130, 330, Image.SCALE_SMOOTH);
@@ -86,8 +87,7 @@ public class chap03Narration1 extends JFrame {
 		talkBackGround.setBounds(20, 340, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel("<html>회사에서 새 프로젝트에 들어가게 되었고,<br>"
-				+ "대리님께서 선배와 함께 현장조사를 다녀오라고 하셨다.<br>"
+		JLabel talk = new JLabel("<html>회사에서 새 프로젝트에 들어가게 되었고,<br>" + "대리님께서 선배와 함께 현장조사를 다녀오라고 하셨다.<br>"
 				+ "대리님 감사합니다..! 선배와 단 둘이라니!</html>");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
@@ -102,11 +102,17 @@ public class chap03Narration1 extends JFrame {
 		// 하단 다음 이미지의 크기, 위치 조정
 		next.setBounds(750, 150, 150, 80);
 
+		// 매개변수로 전달받은 스테이지 번호를 넘겨주기 위한 작업
+		String stageNum = String.valueOf(stage);
+		JLabel test = new JLabel(stageNum);
+		test.setVisible(false);
+
 		// panel에 추가
 		pan.add(person);
 		pan.add(loveBar);
 		pan.add(closewords);
 		pan.add(talkBackGround);
+		pan.add(test);
 
 		// 하단 대화 테두리에 다음 이미지 추가
 		talkBackGround.add(next);
@@ -121,13 +127,18 @@ public class chap03Narration1 extends JFrame {
 				new warning();
 			}
 		});
-		
+
 		// 다음 버튼 이벤트 -> 화면 전환
 		next.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				chap03Narration1.this.dispose();
-				new chap03Narration2();
+				
+				String num = test.getText();
+				int stage = Integer.parseInt(num);
+				stage++;
+				
+				new chap03Narration2(stage, lovePoint);
 			}
 		});
 
