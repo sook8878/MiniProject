@@ -21,8 +21,12 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class badEnd extends JFrame {
-
+	
 	public badEnd() {
+		
+	}
+
+	public badEnd(String name, int stage, int lovePoint) {
 
 		// 프레임 설정
 		this.setSize(1000, 680);

@@ -18,8 +18,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class sosoEnd extends JFrame {
-
+	
 	public sosoEnd() {
+		
+	}
+
+	public sosoEnd(String name, int stage, int lovePoint) {
 
 		// 프레임 설정
 		this.setSize(1000, 680);

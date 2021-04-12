@@ -19,12 +19,11 @@ import javax.swing.JPanel;
 
 public class chap04Talk1 extends JFrame {
 	
-	private int stage = 0;
-	private int lovePoint = 50;
-	
-	String name = "oo";
-
 	public chap04Talk1() {
+		
+	}
+
+	public chap04Talk1(String name, int stage, int lovePoint) {
 
 		// 프레임 설정
 		this.setSize(1000, 680);
@@ -101,12 +100,24 @@ public class chap04Talk1 extends JFrame {
 
 		// 하단 다음 이미지의 크기, 위치 조정
 		next.setBounds(750, 150, 150, 80);
+		
+		// 매개변수로 전달받은 스테이지 번호를 넘겨주기 위한 작업
+		String stageNum = String.valueOf(stage);
+		JLabel test = new JLabel(stageNum);
+		test.setVisible(false);
+		
+		// 매개변수로 전달받은 호감도 넘겨주기 위한 작업
+		String lovePointNum = String.valueOf(lovePoint);
+		JLabel lovePointLabel = new JLabel(lovePointNum);
+		lovePointLabel.setVisible(false);
 
 		// panel에 추가
 		pan.add(person);
 		pan.add(loveBar);
 		pan.add(closewords);
 		pan.add(talkBackGround);
+		pan.add(test);
+		pan.add(lovePointLabel);
 
 		// 하단 대화 테두리에 다음 이미지 추가
 		talkBackGround.add(next);
@@ -118,7 +129,11 @@ public class chap04Talk1 extends JFrame {
 		closewords.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				new warning();
+				
+				String num = test.getText();
+				int stage1 = Integer.parseInt(num);
+				
+				new warning(name, stage1, lovePoint);
 			}
 		});
 		
@@ -127,7 +142,12 @@ public class chap04Talk1 extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				chap04Talk1.this.dispose();
-				new chap04Talk2();
+				
+				String num = test.getText();
+				int stage2 = Integer.parseInt(num);
+				stage2++;
+				
+				new chap04Talk2(name, stage2, lovePoint);
 			}
 		});
 

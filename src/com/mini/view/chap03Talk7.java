@@ -18,11 +18,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class chap03Talk7 extends JFrame {
-	
-	private int stage = 0;
-	private int lovePoint = 50;
-	
+
 	public chap03Talk7() {
+
+	}
+
+	public chap03Talk7(String name, int stage, int lovePoint) {
 
 		// 프레임 설정
 		this.setSize(1000, 680);
@@ -51,17 +52,17 @@ public class chap03Talk7 extends JFrame {
 		String img = "";
 
 		if (lovePoint >= 80) {
-			
+
 			img = "image/loveBar3.png";
 
 		} else if (lovePoint >= 50) {
 
 			img = "image/loveBar2.png";
 		} else {
-			
+
 			img = "image/loveBar1.png";
 		}
-		
+
 		// 상단 호감도 표시
 		Image loveBarImg = new ImageIcon(img).getImage();
 		loveBarImg.getScaledInstance(130, 330, Image.SCALE_SMOOTH);
@@ -86,8 +87,7 @@ public class chap03Talk7 extends JFrame {
 		talkBackGround.setBounds(20, 335, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel("<html>같이 길을 걷다가 골목길에서 갑자기 무언가 튀어 나오는데!!<br>"
-				+ "그건 바로 이 일대에서 유명한 도둑 고양이!!<br>"
+		JLabel talk = new JLabel("<html>같이 길을 걷다가 골목길에서 갑자기 무언가 튀어 나오는데!!<br>" + "그건 바로 이 일대에서 유명한 도둑 고양이!!<br>"
 				+ "선호씨의 소중한 지갑을 물고 훔쳐가는데!</html>");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
@@ -102,11 +102,23 @@ public class chap03Talk7 extends JFrame {
 		// 하단 다음 이미지의 크기, 위치 조정
 		next.setBounds(750, 150, 150, 80);
 
+		// 매개변수로 전달받은 스테이지 번호를 넘겨주기 위한 작업
+		String stageNum = String.valueOf(stage);
+		JLabel test = new JLabel(stageNum);
+		test.setVisible(false);
+
+		// 매개변수로 전달받은 호감도 넘겨주기 위한 작업
+		String lovePointNum = String.valueOf(lovePoint);
+		JLabel lovePointLabel = new JLabel(lovePointNum);
+		lovePointLabel.setVisible(false);
+
 		// panel에 추가
 		pan.add(person);
 		pan.add(loveBar);
 		pan.add(closewords);
 		pan.add(talkBackGround);
+		pan.add(test);
+		pan.add(lovePointLabel);
 
 		// 하단 대화 테두리에 다음 이미지 추가
 		talkBackGround.add(next);
@@ -118,16 +130,25 @@ public class chap03Talk7 extends JFrame {
 		closewords.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				new warning();
+				
+				String num = test.getText();
+				int stage1 = Integer.parseInt(num);
+				
+				new warning(name, stage1, lovePoint);
 			}
 		});
-		
+
 		// 다음 버튼 이벤트 -> 화면 전환
 		next.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				chap03Talk7.this.dispose();
-				new chap03Talk8();
+				
+				String num = test.getText();
+				int stage2 = Integer.parseInt(num);
+				stage2++;
+				
+				new chap03Talk8(name, stage2, lovePoint);
 			}
 		});
 
