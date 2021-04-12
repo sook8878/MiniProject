@@ -22,13 +22,11 @@ import java.util.TimerTask;
 
 public class chap01Talk1 extends JFrame {
 
-	String name = "oo";
-
 	public chap01Talk1() {
 
 	}
 
-	public chap01Talk1(int stage, int lovePoint) {
+	public chap01Talk1(String name, int stage, int lovePoint) {
 
 		// 프레임 설정
 		this.setSize(1000, 680);
@@ -152,9 +150,8 @@ public class chap01Talk1 extends JFrame {
 				
 				String num = test.getText();
 				int stage1 = Integer.parseInt(num);
-				stage1++;
 				
-				new warning(stage1, lovePoint);
+				new warning(name, stage1, lovePoint);
 			}
 		});
 
@@ -168,7 +165,7 @@ public class chap01Talk1 extends JFrame {
 				int stage2 = Integer.parseInt(num);
 				stage2++;
 
-				new chap01Talk2(stage2, lovePoint);
+				new chap01Talk2(name, stage2, lovePoint);
 			}
 		});
 

@@ -26,7 +26,7 @@ public class chap01Choice1 extends JFrame {
 		
 	}
 
-	public chap01Choice1(int stage, int lovePoint) {
+	public chap01Choice1(String name, int stage, int lovePoint) {
 
 		// 프레임 설정
 		this.setSize(1000, 680);
@@ -133,8 +133,8 @@ public class chap01Choice1 extends JFrame {
 				chap01Choice1.this.dispose();
 				
 				String num = test.getText();
-				int stage = Integer.parseInt(num);
-				stage++;
+				int stage2 = Integer.parseInt(num);
+				stage2++;
 				
 				String lovePointnum = lovePointLabel.getText();
 				int lovePoint = Integer.parseInt(lovePointnum);
@@ -160,14 +160,14 @@ public class chap01Choice1 extends JFrame {
 				chap01Choice1.this.dispose();
 				
 				String num = test.getText();
-				int stage = Integer.parseInt(num);
-				stage++;
+				int stage2 = Integer.parseInt(num);
+				stage2++;
 				
 				String lovePointnum = lovePointLabel.getText();
 				int lovePoint = Integer.parseInt(lovePointnum);
 				lovePoint += 10; //호감도 증가하는 값 일단 임의로 그냥 넣음 나중에 수정해야함
 				
-			    new chap02Narration1(stage, lovePoint); //챕터2로 바로 이동
+			    new chap02Narration1(name, stage2, lovePoint); //챕터2로 바로 이동
 			}
 
 		});
@@ -185,8 +185,8 @@ public class chap01Choice1 extends JFrame {
 				chap01Choice1.this.dispose();
 				
 				String num = test.getText();
-				int stage = Integer.parseInt(num);
-				stage++;
+				int stage2 = Integer.parseInt(num);
+				stage2++;
 				
 				String lovePointnum = lovePointLabel.getText();
 				int lovePoint = Integer.parseInt(lovePointnum);
@@ -229,7 +229,11 @@ public class chap01Choice1 extends JFrame {
 		closewords.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				new warning();
+				
+				String num = test.getText();
+				int stage1 = Integer.parseInt(num);
+				
+				new warning(name, stage1, lovePoint);
 			}
 		});
 

@@ -23,7 +23,7 @@ public class chap03Narration1 extends JFrame {
 
 	}
 
-	public chap03Narration1(int stage, int lovePoint) {
+	public chap03Narration1(String name, int stage, int lovePoint) {
 
 		// 프레임 설정
 		this.setSize(1000, 680);
@@ -106,6 +106,11 @@ public class chap03Narration1 extends JFrame {
 		String stageNum = String.valueOf(stage);
 		JLabel test = new JLabel(stageNum);
 		test.setVisible(false);
+		
+		// 매개변수로 전달받은 호감도 넘겨주기 위한 작업
+		String lovePointNum = String.valueOf(lovePoint);
+		JLabel lovePointLabel = new JLabel(lovePointNum);
+		lovePointLabel.setVisible(false);
 
 		// panel에 추가
 		pan.add(person);
@@ -113,6 +118,7 @@ public class chap03Narration1 extends JFrame {
 		pan.add(closewords);
 		pan.add(talkBackGround);
 		pan.add(test);
+		pan.add(lovePointLabel);
 
 		// 하단 대화 테두리에 다음 이미지 추가
 		talkBackGround.add(next);
@@ -124,21 +130,26 @@ public class chap03Narration1 extends JFrame {
 		closewords.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				new warning();
+				
+				String num = test.getText();
+				int stage1 = Integer.parseInt(num);
+				
+				new warning(name, stage1, lovePoint);
 			}
 		});
 
 		// 다음 버튼 이벤트 -> 화면 전환
 		next.addMouseListener(new MouseAdapter() {
+			
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				chap03Narration1.this.dispose();
 				
 				String num = test.getText();
-				int stage = Integer.parseInt(num);
-				stage++;
+				int stage2 = Integer.parseInt(num);
+				stage2++;
 				
-				new chap03Narration2(stage, lovePoint);
+				new chap03Narration2(name, stage2, lovePoint);
 			}
 		});
 

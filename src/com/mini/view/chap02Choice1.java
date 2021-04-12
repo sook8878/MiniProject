@@ -23,7 +23,7 @@ public class chap02Choice1 extends JFrame {
 
 	}
 
-	public chap02Choice1(int stage, int lovePoint) {
+	public chap02Choice1(String name, int stage, int lovePoint) {
 
 		// 프레임 설정
 		this.setSize(1000, 680);
@@ -90,6 +90,11 @@ public class chap02Choice1 extends JFrame {
 		String stageNum = String.valueOf(stage);
 		JLabel test = new JLabel(stageNum);
 		test.setVisible(false);
+		
+		// 매개변수로 전달받은 호감도 넘겨주기 위한 작업
+		String lovePointNum = String.valueOf(lovePoint);
+		JLabel lovePointLabel = new JLabel(lovePointNum);
+		lovePointLabel.setVisible(false);
 
 		// 선택지 버튼
 		JButton choice1_btn = new JButton();
@@ -121,8 +126,12 @@ public class chap02Choice1 extends JFrame {
 				chap02Choice1.this.dispose();
 				
 				String num = test.getText();
-				int stage = Integer.parseInt(num);
-				stage++;
+				int stage2 = Integer.parseInt(num);
+				stage2++;
+				
+				String lovePointnum = lovePointLabel.getText();
+				int lovePoint = Integer.parseInt(lovePointnum);
+				lovePoint += 10; //호감도 증가하는 값 일단 임의로 그냥 넣음 나중에 수정해야함
 				
 				// 현우오빠 게임 부르기
 			}
@@ -142,10 +151,14 @@ public class chap02Choice1 extends JFrame {
 				chap02Choice1.this.dispose();
 				
 				String num = test.getText();
-				int stage = Integer.parseInt(num);
-				stage++;
+				int stage2 = Integer.parseInt(num);
+				stage2++;
 				
-				new chap03Narration1(stage, lovePoint);
+				String lovePointnum = lovePointLabel.getText();
+				int lovePoint = Integer.parseInt(lovePointnum);
+				lovePoint += 10; //호감도 증가하는 값 일단 임의로 그냥 넣음 나중에 수정해야함
+				
+				new chap03Narration1(name, stage2, lovePoint);
 			}
 
 		});
@@ -168,6 +181,7 @@ public class chap02Choice1 extends JFrame {
 		pan.add(closewords);
 		pan.add(talkBackGround);
 		pan.add(test);
+		pan.add(lovePointLabel);
 
 		// 프레임 판넬 추가
 		this.add(pan, "Center");
@@ -176,7 +190,11 @@ public class chap02Choice1 extends JFrame {
 		closewords.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				new warning();
+				
+				String num = test.getText();
+				int stage1 = Integer.parseInt(num);
+				
+				new warning(name, stage1, lovePoint);
 			}
 		});
 

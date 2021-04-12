@@ -23,6 +23,7 @@ public class SecondMain extends JFrame {
 	
 	private int stage = 0;
 	private int lovePoint = 50;
+	private String name = "";
 
 	// 두번째 화면 
 	public SecondMain() {
@@ -79,7 +80,8 @@ public class SecondMain extends JFrame {
 					super.mouseClicked(e);
 					setVisible(false);
 					stage++;
-					new chap01Narration1(stage, lovePoint);
+					name = tf.getText();
+					new chap01Narration1(name, stage, lovePoint);
 				} else {
 					JOptionPane.showMessageDialog(null, "이름을 입력하세요");
 				}

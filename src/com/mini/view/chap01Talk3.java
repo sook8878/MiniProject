@@ -19,13 +19,11 @@ import javax.swing.JPanel;
 
 public class chap01Talk3 extends JFrame {
 	
-	String name = "oo";
-	
 	public chap01Talk3() {
 		
 	}
 
-	public chap01Talk3(int stage, int lovePoint) {
+	public chap01Talk3(String name, int stage, int lovePoint) {
 
 		// 프레임 설정
 		this.setSize(1000, 680);
@@ -132,7 +130,11 @@ public class chap01Talk3 extends JFrame {
 		closewords.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				new warning();
+				
+				String num = test.getText();
+				int stage1 = Integer.parseInt(num);
+				
+				new warning(name, stage1, lovePoint);
 			}
 		});
 		
@@ -143,10 +145,10 @@ public class chap01Talk3 extends JFrame {
 				chap01Talk3.this.dispose();
 				
 				String num = test.getText();
-				int stage = Integer.parseInt(num);
-				stage++;
+				int stage2 = Integer.parseInt(num);
+				stage2++;
 				
-				new chap01Talk4(stage, lovePoint);
+				new chap01Talk4(name, stage2, lovePoint);
 			}
 		});
 

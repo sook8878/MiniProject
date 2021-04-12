@@ -23,7 +23,7 @@ public class chap02Talk2 extends JFrame {
 
 	}
 
-	public chap02Talk2(int stage, int lovePoint) {
+	public chap02Talk2(String name, int stage, int lovePoint) {
 
 		// 프레임 설정
 		this.setSize(1000, 680);
@@ -106,12 +106,18 @@ public class chap02Talk2 extends JFrame {
 		JLabel test = new JLabel(stageNum);
 		test.setVisible(false);
 
+		// 매개변수로 전달받은 호감도 넘겨주기 위한 작업
+		String lovePointNum = String.valueOf(lovePoint);
+		JLabel lovePointLabel = new JLabel(lovePointNum);
+		lovePointLabel.setVisible(false);
+
 		// panel에 추가
 		pan.add(person);
 		pan.add(loveBar);
 		pan.add(closewords);
 		pan.add(talkBackGround);
 		pan.add(test);
+		pan.add(lovePointLabel);
 
 		// 하단 대화 테두리에 다음 이미지 추가
 		talkBackGround.add(next);
@@ -123,7 +129,11 @@ public class chap02Talk2 extends JFrame {
 		closewords.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				new warning();
+
+				String num = test.getText();
+				int stage1 = Integer.parseInt(num);
+
+				new warning(name, stage1, lovePoint);
 			}
 		});
 
@@ -134,10 +144,10 @@ public class chap02Talk2 extends JFrame {
 				chap02Talk2.this.dispose();
 
 				String num = test.getText();
-				int stage = Integer.parseInt(num);
-				stage++;
+				int stage2 = Integer.parseInt(num);
+				stage2++;
 
-				new chap02Talk3(stage, lovePoint);
+				new chap02Talk3(name, stage, lovePoint);
 			}
 		});
 

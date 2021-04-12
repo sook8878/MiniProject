@@ -23,7 +23,7 @@ public class chap01Narration1 extends JFrame {
 
 	}
 
-	public chap01Narration1(int stage, int lovePoint) {
+	public chap01Narration1(String name, int stage, int lovePoint) {
 
 		// 프레임 설정
 		this.setSize(1000, 680);
@@ -131,7 +131,11 @@ public class chap01Narration1 extends JFrame {
 		closewords.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				new warning();
+				
+				String num = test.getText();
+				int stage1 = Integer.parseInt(num);
+				
+				new warning(name, stage1, lovePoint);
 			}
 		});
 
@@ -143,10 +147,10 @@ public class chap01Narration1 extends JFrame {
 				chap01Narration1.this.dispose();
 
 				String num = test.getText();
-				int stage = Integer.parseInt(num);
-				stage++;
+				int stage2 = Integer.parseInt(num);
+				stage2++;
 
-				new chap01Talk1(stage, lovePoint);
+				new chap01Talk1(name, stage2, lovePoint);
 			}
 		});
 
