@@ -38,11 +38,11 @@ public class FristMain extends JFrame {
 		sunhoWords.setLocation(550, 170);
 		
 		// 제목 화면
-		Image titleImg = new ImageIcon("image/제목.png").getImage().getScaledInstance(400, 100, Image.SCALE_SMOOTH);
+		Image titleImg = new ImageIcon("image/제목3.png").getImage().getScaledInstance(400, 135, Image.SCALE_SMOOTH);
 		JLabel titleWords = new JLabel(new ImageIcon(titleImg));
 		
-		titleWords.setBounds(100, 100, 400, 100);
-		titleWords.setLocation(250, 0);
+		titleWords.setSize(400,135);
+		titleWords.setLocation(300, 5);
 		
 		// 준비하기
 		Image startImg = new ImageIcon("image/준비하기.png").getImage().getScaledInstance(300, 100, Image.SCALE_SMOOTH);

@@ -41,12 +41,12 @@ public class chap03Talk4 extends JFrame {
 		pan.setBackground(b);
 
 		// 상단에 사람 이미지
-		Image personImg = new ImageIcon("image/김선호.png").getImage();
-		personImg.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
+		Image personImg = new ImageIcon("image/나레이션1.png").getImage();
+		personImg.getScaledInstance(780, 300, Image.SCALE_SMOOTH);
 		JLabel person = new JLabel(new ImageIcon(personImg));
 
 		// 상단의 이미지 크기, 위치 조정
-		person.setBounds(5, 20, 1000, 300);
+		person.setBounds(87, 20, 780, 300);
 
 		String img = "";
 
@@ -68,7 +68,7 @@ public class chap03Talk4 extends JFrame {
 		JLabel loveBar = new JLabel(new ImageIcon(loveBarImg));
 
 		// 상단 호감도 표시 크기, 위치 조정
-		loveBar.setBounds(10, 1, 130, 330);
+		loveBar.setBounds(895, 50, 60, 150);
 
 		// 상단 오른쪽 프로그램 종료 버튼
 		Image closeImg = new ImageIcon("image/close.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
@@ -83,7 +83,7 @@ public class chap03Talk4 extends JFrame {
 		JLabel talkBackGround = new JLabel(new ImageIcon(talkBackGroundImg));
 
 		// 하단에 대화 테두리의 크기, 위치 조정
-		talkBackGround.setBounds(20, 340, 920, 270);
+		talkBackGround.setBounds(20, 335, 920, 270);
 
 		// 하단 대화 내용
 		JLabel talk = new JLabel("<html>선호 : 골목이 너무 어둡네,<br><br>"
