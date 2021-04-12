@@ -21,11 +21,11 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class chap01Talk1 extends JFrame {
-	
+
 	String name = "oo";
-	
+
 	public chap01Talk1() {
-		
+
 	}
 
 	public chap01Talk1(int stage, int lovePoint) {
@@ -57,17 +57,17 @@ public class chap01Talk1 extends JFrame {
 		String img = "";
 
 		if (lovePoint >= 80) {
-			
+
 			img = "image/loveBar3.png";
 
 		} else if (lovePoint >= 50) {
 
 			img = "image/loveBar2.png";
 		} else {
-			
+
 			img = "image/loveBar1.png";
 		}
-		
+
 		// 상단 호감도 표시
 		Image loveBarImg = new ImageIcon(img).getImage();
 		loveBarImg.getScaledInstance(130, 330, Image.SCALE_SMOOTH);
@@ -92,8 +92,7 @@ public class chap01Talk1 extends JFrame {
 		talkBackGround.setBounds(20, 335, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel("<html>선호 : " + name + "아 , 회사에서 이렇게 보게 되니 너무 반갑다<br><br>"
-				                + "뭐 마실래 ?</html>");
+		JLabel talk = new JLabel("<html>선호 : " + name + "아 , 회사에서 이렇게 보게 되니 너무 반갑다<br><br>" + "뭐 마실래 ?</html>");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 
@@ -106,7 +105,7 @@ public class chap01Talk1 extends JFrame {
 
 //		// 하단 다음 이미지의 크기, 위치 조정
 		next.setBounds(750, 150, 150, 80);
-		
+
 //		Timer timer = new Timer();
 //		TimerTask timerTask = new TimerTask() {
 //
@@ -121,11 +120,16 @@ public class chap01Talk1 extends JFrame {
 //		};
 //
 //		timer.schedule(timerTask, 7000);
-		
-		// 매개변수로 전달받은 스테이지 번호를 넘겨주기 위한 작업 
+
+		// 매개변수로 전달받은 스테이지 번호를 넘겨주기 위한 작업
 		String stageNum = String.valueOf(stage);
 		JLabel test = new JLabel(stageNum);
 		test.setVisible(false);
+
+		// 매개변수로 전달받은 호감도 넘겨주기 위한 작업
+		String lovePointNum = String.valueOf(lovePoint);
+		JLabel lovePointLabel = new JLabel(lovePointNum);
+		lovePointLabel.setVisible(false);
 
 		// panel에 추가
 		pan.add(person);
@@ -133,6 +137,7 @@ public class chap01Talk1 extends JFrame {
 		pan.add(closewords);
 		pan.add(talkBackGround);
 		pan.add(test);
+		pan.add(lovePointLabel);
 
 //		// 하단 대화 테두리에 다음 이미지 추가
 		talkBackGround.add(next);
@@ -147,17 +152,17 @@ public class chap01Talk1 extends JFrame {
 				new warning();
 			}
 		});
-		
+
 		// 다음 버튼 이벤트 -> 화면 전환
 		next.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				chap01Talk1.this.dispose();
-				
+
 				String num = test.getText();
 				int stage = Integer.parseInt(num);
 				stage++;
-				
+
 				new chap01Talk2(stage, lovePoint);
 			}
 		});

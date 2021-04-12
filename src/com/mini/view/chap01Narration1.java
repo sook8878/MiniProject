@@ -18,9 +18,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class chap01Narration1 extends JFrame {
-	
+
 	public chap01Narration1() {
-		
+
 	}
 
 	public chap01Narration1(int stage, int lovePoint) {
@@ -48,21 +48,21 @@ public class chap01Narration1 extends JFrame {
 
 		// 상단의 이미지 크기, 위치 조정
 		person.setBounds(87, 20, 780, 300);
-		
+
 		String img = "";
 
 		if (lovePoint >= 80) {
-			
+
 			img = "image/loveBar3.png";
 
 		} else if (lovePoint >= 50) {
 
 			img = "image/loveBar2.png";
 		} else {
-			
+
 			img = "image/loveBar1.png";
 		}
-		
+
 		// 상단 호감도 표시
 		Image loveBarImg = new ImageIcon(img).getImage();
 		loveBarImg.getScaledInstance(60, 150, Image.SCALE_SMOOTH);
@@ -87,10 +87,9 @@ public class chap01Narration1 extends JFrame {
 		talkBackGround.setBounds(20, 335, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel("<html>대장정의 취준생 생활을 끝마치고 드디어 고대하던 입사 첫날...<br>"
-				+ "회사 출근 날 떨리는 마음으로 부서 사람들에게 첫인사를 드리는데...<br>"
-				+ "대학교 내내 혼자 짝사랑했던 선배를 마주쳤다...<br><br>"
-				+ "심지어 그 선배가 내 사수라니...!!!</html>");
+		JLabel talk = new JLabel(
+				"<html>대장정의 취준생 생활을 끝마치고 드디어 고대하던 입사 첫날...<br>" + "회사 출근 날 떨리는 마음으로 부서 사람들에게 첫인사를 드리는데...<br>"
+						+ "대학교 내내 혼자 짝사랑했던 선배를 마주쳤다...<br><br>" + "심지어 그 선배가 내 사수라니...!!!</html>");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 
@@ -103,11 +102,16 @@ public class chap01Narration1 extends JFrame {
 
 		// 하단 다음 이미지의 크기, 위치 조정
 		next.setBounds(750, 150, 150, 80);
-		
-		// 매개변수로 전달받은 스테이지 번호를 넘겨주기 위한 작업 
+
+		// 매개변수로 전달받은 스테이지 번호를 넘겨주기 위한 작업
 		String stageNum = String.valueOf(stage);
 		JLabel test = new JLabel(stageNum);
 		test.setVisible(false);
+
+		// 매개변수로 전달받은 호감도 넘겨주기 위한 작업
+		String lovePointNum = String.valueOf(lovePoint);
+		JLabel lovePointLabel = new JLabel(lovePointNum);
+		lovePointLabel.setVisible(false);
 
 		// panel에 추가
 		pan.add(person);
@@ -115,6 +119,7 @@ public class chap01Narration1 extends JFrame {
 		pan.add(closewords);
 		pan.add(talkBackGround);
 		pan.add(test);
+		pan.add(lovePointLabel);
 
 		// 하단 대화 테두리에 다음 이미지 추가
 		talkBackGround.add(next);
@@ -129,18 +134,18 @@ public class chap01Narration1 extends JFrame {
 				new warning();
 			}
 		});
-		
+
 		// 다음 버튼 이벤트 -> 화면 전환
 		next.addMouseListener(new MouseAdapter() {
-			
+
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				chap01Narration1.this.dispose();
-				
+
 				String num = test.getText();
 				int stage = Integer.parseInt(num);
 				stage++;
-				
+
 				new chap01Talk1(stage, lovePoint);
 			}
 		});
