@@ -292,7 +292,8 @@ public class CatchCatGame extends JFrame  {
 						leftLife--;
 						countLeftHeartLabel.setText("남은 목숨 : " + leftLife);
 						if(leftLife == 0) {
-							// 게임 종료시 버튼 사라지게 하는 // 게임 실패 호감도 -- ===================================================
+							// 게임 종료시 버튼 사라지게 하는 
+							// 게임 실패 호감도 -- ===================================================
 							cat.setVisible(false);
 							chiwawa[k].setVisible(false);
 							chiwawa[i].setVisible(false);
