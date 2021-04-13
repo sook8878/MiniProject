@@ -35,8 +35,10 @@ public class warning {
 		int result = JOptionPane.showConfirmDialog(null,warning,"경고문",JOptionPane.YES_NO_OPTION,JOptionPane.WARNING_MESSAGE);
 		
 		if(result == JOptionPane.YES_OPTION) {
-			
-			new UserController().savaStage(name,stage,lovePoint); 
+			if (!"".equals(name) && name != null) {
+				//name이 비어있지 않고 name이 널이 아니면 db에 저장한다.
+				new UserController().savaStage(name,stage,lovePoint);
+			}
 			System.out.println("YES");
 			System.exit(0);
 		} else if(result == JOptionPane.NO_OPTION) {

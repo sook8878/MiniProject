@@ -6,6 +6,7 @@ import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.List;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -16,6 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import com.mini.controller.UserController;
+import com.mini.model.dto.GameInfotmationDTO;
 
 
 public class SecondMain extends JFrame {
@@ -82,42 +84,45 @@ public class SecondMain extends JFrame {
 					super.mouseClicked(e);
 					new UserController().saveUser(tf.getText());
 					setVisible(false);
-					
-					stage++;
-					name = tf.getText();
-					
-					switch(stage) {
-					
-						case 1: new chap01Narration1(name, stage, lovePoint); break;
-						case 2: new chap01Talk1(name, stage, lovePoint); break;
-						case 3: new chap01Talk2(name, stage, lovePoint); break;
-						case 4: new chap01Talk3(name, stage, lovePoint); break;
-						case 5: new chap01Talk4(name, stage, lovePoint); break;
-						case 6: new chap01Choice1(name, stage, lovePoint); break;
-						case 7: new chap02Narration1(name, stage, lovePoint); break;
-						case 8: new chap02Talk1(name, stage, lovePoint); break;
-						case 9: new chap02Talk2(name, stage, lovePoint); break;
-						case 10: new chap02Talk3(name, stage, lovePoint); break;
-						case 11: new chap02Choice1(name, stage, lovePoint); break;
-						case 12: new chap03Narration1(name, stage, lovePoint); break;
-						case 13: new chap03Narration2(name, stage, lovePoint); break;
-						case 14: new chap03Talk1(name, stage, lovePoint); break;
-						case 15: new chap03Talk2(name, stage, lovePoint); break;
-						case 16: new chap03Talk3(name, stage, lovePoint); break;
-						case 17: new chap03Talk4(name, stage, lovePoint); break;
-						case 18: new chap03Talk5(name, stage, lovePoint); break;
-						case 19: new chap03Talk6(name, stage, lovePoint); break;
-						case 20: new chap03Talk7(name, stage, lovePoint); break;
-						case 21: new chap03Talk8(name, stage, lovePoint); break;
-						case 22: new chap04Narration1(name, stage, lovePoint); break;
-						case 23: new chap04Narration2(name, stage, lovePoint); break;
-						case 24: new chap04Talk1(name, stage, lovePoint); break;
-						case 25: new chap04Talk2(name, stage, lovePoint); break;
-						case 26: new chap04Talk3(name, stage, lovePoint); break;
-						case 27: new chap04Talk4(name, stage, lovePoint); break;
-						case 28: new chap04Talk5(name, stage, lovePoint); break;
-					
-					}
+//					
+//					stage++;
+//					name = tf.getText();
+//					
+////					List<GameInfotmationDTO> receviedUser = new UserController().rankAllUser();
+////					receviedUser = tf.getText();
+//					
+//					switch(stage) {
+//					
+//						case 1: new chap01Narration1(name, stage, lovePoint); break;
+//						case 2: new chap01Talk1(name, stage, lovePoint); break;
+//						case 3: new chap01Talk2(name, stage, lovePoint); break;
+//						case 4: new chap01Talk3(name, stage, lovePoint); break;
+//						case 5: new chap01Talk4(name, stage, lovePoint); break;
+//						case 6: new chap01Choice1(name, stage, lovePoint); break;
+//						case 7: new chap02Narration1(name, stage, lovePoint); break;
+//						case 8: new chap02Talk1(name, stage, lovePoint); break;
+//						case 9: new chap02Talk2(name, stage, lovePoint); break;
+//						case 10: new chap02Talk3(name, stage, lovePoint); break;
+//						case 11: new chap02Choice1(name, stage, lovePoint); break;
+//						case 12: new chap03Narration1(name, stage, lovePoint); break;
+//						case 13: new chap03Narration2(name, stage, lovePoint); break;
+//						case 14: new chap03Talk1(name, stage, lovePoint); break;
+//						case 15: new chap03Talk2(name, stage, lovePoint); break;
+//						case 16: new chap03Talk3(name, stage, lovePoint); break;
+//						case 17: new chap03Talk4(name, stage, lovePoint); break;
+//						case 18: new chap03Talk5(name, stage, lovePoint); break;
+//						case 19: new chap03Talk6(name, stage, lovePoint); break;
+//						case 20: new chap03Talk7(name, stage, lovePoint); break;
+//						case 21: new chap03Talk8(name, stage, lovePoint); break;
+//						case 22: new chap04Narration1(name, stage, lovePoint); break;
+//						case 23: new chap04Narration2(name, stage, lovePoint); break;
+//						case 24: new chap04Talk1(name, stage, lovePoint); break;
+//						case 25: new chap04Talk2(name, stage, lovePoint); break;
+//						case 26: new chap04Talk3(name, stage, lovePoint); break;
+//						case 27: new chap04Talk4(name, stage, lovePoint); break;
+//						case 28: new chap04Talk5(name, stage, lovePoint); break;
+//					
+//					}
 					
 				} else {
 					JOptionPane.showMessageDialog(null, "이름을 입력하세요");

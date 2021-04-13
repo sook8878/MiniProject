@@ -119,6 +119,7 @@ public class GameInfotmationDAO {
 				
 				gameinformationdto.setUsername(rset.getString("USERNAME"));
 				gameinformationdto.setPlaydate(rset.getDate("PLAYDATE"));
+				gameinformationdto.setStage(rset.getInt("STAGE"));
 				gameinformationdto.setHeart(rset.getInt("HEART"));
 				gameinformationdto.setNumberid(rset.getInt("NUMBER_ID"));
 				

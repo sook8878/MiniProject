@@ -67,13 +67,25 @@ public class FristMain extends JFrame {
 		Image secondImg = new ImageIcon("image/이어서.png").getImage().getScaledInstance(240, 100, Image.SCALE_SMOOTH);
 		JLabel seondWords = new JLabel(new ImageIcon(secondImg));
 		seondWords.setSize(300, 300);
-		seondWords.setLocation(130, 245);
+		seondWords.setLocation(130, 290);
+		
+		seondWords.addMouseListener(new MouseAdapter() {
+
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				super.mouseClicked(e);
+				setVisible(false);
+				new SaveUserMain();
+			}
+		
+		});
+		
 
 		// 순위보기
 		Image rankImg = new ImageIcon("image/순위.png").getImage().getScaledInstance(240, 100, Image.SCALE_SMOOTH);
 		JLabel rankWords = new JLabel(new ImageIcon(rankImg));
 		rankWords.setSize(300, 300);
-		rankWords.setLocation(130, 355);
+		rankWords.setLocation(130, 440);
 		
 		
 		// rankList로 넘어가기 위함.
