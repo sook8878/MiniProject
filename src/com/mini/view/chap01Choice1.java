@@ -18,6 +18,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import gamePlay.CardGame;
+import gamePlay.CardGameMoveChap;
 import gamePlay.CardGame.GameFrame;
 
 public class chap01Choice1 extends JFrame {
@@ -142,7 +143,7 @@ public class chap01Choice1 extends JFrame {
 				
 				//미니게임 gui 호출
 				CardGame.startView(); //시작팝업
-				GameFrame game = new GameFrame("시뮬레이션");
+				GameFrame game = new GameFrame(name, stage2, lovePoint);
 			}
 
 		});
@@ -194,7 +195,7 @@ public class chap01Choice1 extends JFrame {
 				
 				//미니게임 gui 호출
 				CardGame.startView(); //시작팝업
-				GameFrame game = new GameFrame("시뮬레이션");
+				GameFrame game = new GameFrame(name, stage2, lovePoint);
 			}
 
 		});

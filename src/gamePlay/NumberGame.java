@@ -24,6 +24,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import com.mini.view.chap03Narration1;
+import com.mini.view.warning;
 
 public class NumberGame extends JFrame {
 	
@@ -294,25 +295,10 @@ public class NumberGame extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				// close 팝업 표시
-			    JLabel close = new JLabel("프로그램을 종료 하시겠습니까?");
-			    close.setFont(new Font("배달의민족 주아", Font.PLAIN, 16));
-			      
-			    int result = JOptionPane.showConfirmDialog(null,close,"종료",JOptionPane.YES_NO_OPTION,JOptionPane.WARNING_MESSAGE);
-			      
-			    if(result == JOptionPane.YES_OPTION) {
-			    	
-			        System.out.println("종료");
-			        timer.cancel(); // close 버튼 눌러서 종료 시 타이머도 종료
-			        dispose();
-			      
-			     } else if(result == JOptionPane.NO_OPTION) {
-			     
-			    	System.out.println("계속 하기");
-			     
-			     } else {
-			         
-			     }
+				// 타이머 멈춰주기
+				timer.cancel();
+				// warning view의 메소드 사용하여 종료(warning) 팝업 띄움
+				new warning(name, stage, lovePoint);
 				
 			}
 		

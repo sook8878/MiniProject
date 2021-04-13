@@ -31,25 +31,25 @@ public class FristMain extends JFrame {
 		pan.setBackground(b);
 
 		// 남자 주인공
-		Image sunhoImg = new ImageIcon("image/sunho1.jpg").getImage().getScaledInstance(500, 500, Image.SCALE_SMOOTH);
+		Image sunhoImg = new ImageIcon("image/선호아이콘.png").getImage().getScaledInstance(450, 450, Image.SCALE_SMOOTH);
 		JLabel sunhoWords = new JLabel(new ImageIcon(sunhoImg));
 		
-		sunhoWords.setSize(400, 500);
-		sunhoWords.setLocation(550, 170);
+		sunhoWords.setSize(450, 450);
+		sunhoWords.setLocation(430, 170);
 		
 		// 제목 화면
-		Image titleImg = new ImageIcon("image/제목3.png").getImage().getScaledInstance(400, 135, Image.SCALE_SMOOTH);
+		Image titleImg = new ImageIcon("image/제목.png").getImage().getScaledInstance(450, 152, Image.SCALE_SMOOTH);
 		JLabel titleWords = new JLabel(new ImageIcon(titleImg));
 		
-		titleWords.setSize(400,135);
-		titleWords.setLocation(300, 5);
+		titleWords.setSize(450,152);
+		titleWords.setLocation(260, 10);
 		
-		// 준비하기
-		Image startImg = new ImageIcon("image/준비하기.png").getImage().getScaledInstance(300, 100, Image.SCALE_SMOOTH);
+		// 시작하기
+		Image startImg = new ImageIcon("image/시작.png").getImage().getScaledInstance(240, 100, Image.SCALE_SMOOTH);
 		JLabel startWords = new JLabel(new ImageIcon(startImg));
 		
 		startWords.setSize(300, 300);
-		startWords.setLocation(80, 170);
+		startWords.setLocation(130, 130);
 		
 		// 다음 프레임으로 넘어가기 
 		startWords.addMouseListener(new MouseAdapter() {
@@ -64,16 +64,16 @@ public class FristMain extends JFrame {
 		});
 		
 		// 이어하기
-		Image secondImg = new ImageIcon("image/이어하기.png").getImage().getScaledInstance(300, 100, Image.SCALE_SMOOTH);
+		Image secondImg = new ImageIcon("image/이어서.png").getImage().getScaledInstance(240, 100, Image.SCALE_SMOOTH);
 		JLabel seondWords = new JLabel(new ImageIcon(secondImg));
 		seondWords.setSize(300, 300);
-		seondWords.setLocation(80, 280);
+		seondWords.setLocation(130, 245);
 
 		// 순위보기
-		Image rankImg = new ImageIcon("image/순위보기.png").getImage().getScaledInstance(300, 100, Image.SCALE_SMOOTH);
+		Image rankImg = new ImageIcon("image/순위.png").getImage().getScaledInstance(240, 100, Image.SCALE_SMOOTH);
 		JLabel rankWords = new JLabel(new ImageIcon(rankImg));
 		rankWords.setSize(300, 300);
-		rankWords.setLocation(80, 390);
+		rankWords.setLocation(130, 355);
 		
 		
 		// rankList로 넘어가기 위함.
