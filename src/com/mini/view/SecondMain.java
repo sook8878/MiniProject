@@ -83,8 +83,10 @@ public class SecondMain extends JFrame {
 				if(tf.getText().length() != 0) {
 					super.mouseClicked(e);
 					new UserController().saveUser(tf.getText());
+					new chap01Narration1(name,stage, lovePoint);
 					setVisible(false);
 //					
+					
 //					stage++;
 //					name = tf.getText();
 //					
