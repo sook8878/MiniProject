@@ -17,6 +17,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import com.mini.controller.UserController;
+
 public class sosoEnd extends JFrame {
 	
 	public sosoEnd() {
@@ -104,7 +106,9 @@ public class sosoEnd extends JFrame {
 		next.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				new UserController().savaStage(name,stage,lovePoint);
 				sosoEnd.this.dispose();
+				new rankList();
 				
 			}
 		});

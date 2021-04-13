@@ -17,6 +17,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+
+import com.mini.controller.UserController;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -106,6 +109,7 @@ public class badEnd extends JFrame {
 		next.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				new UserController().savaStage(name,stage,lovePoint);
 				badEnd.this.dispose();
 
 				new rankList();
