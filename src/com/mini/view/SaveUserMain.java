@@ -87,6 +87,7 @@ public class SaveUserMain extends JFrame {
 					List<GameInfotmationDTO> rankUsers = new UserController().rankAllUser();
 					for (int i = 0; i < rankUsers.size(); i++) {
 						// 동일한 이름 찾기.
+						// list에 있는걸 한 개씩 빼오는 것 = rankUsers.get(0번째) for문 
 						GameInfotmationDTO gameInfotmationDTO = rankUsers.get(i);
 						if (tf.getText().equals(gameInfotmationDTO.getUsername())) {
 							// 동일한 이름이 있다 ? 존재하냐 ? 존재한다. 그럼 갖고있던 stage 불러오기.

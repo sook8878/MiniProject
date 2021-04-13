@@ -51,7 +51,7 @@
         UPDATE 
               USER_INFORMATION
            SET STAGE = ?
-               HEART = ?
+               ,HEART = ?
          WHERE USERNAME = ? 	
  	 </entry>
     

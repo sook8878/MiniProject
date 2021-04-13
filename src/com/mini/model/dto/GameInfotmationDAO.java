@@ -144,7 +144,6 @@ public class GameInfotmationDAO {
 		PreparedStatement pstmt = null;
 		int result = 0;
 		
-		Properties prop = new Properties();
 		
 		String query = prop.getProperty("updateuser");
 		try {
