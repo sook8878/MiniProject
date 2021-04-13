@@ -47,8 +47,8 @@ public class FristMain extends JFrame {
 		Image startImg = new ImageIcon("image/시작.png").getImage().getScaledInstance(240, 100, Image.SCALE_SMOOTH);
 		JLabel startWords = new JLabel(new ImageIcon(startImg));
 		
-		startWords.setSize(300, 300);
-		startWords.setLocation(130, 130);
+		startWords.setSize(240, 100);
+		startWords.setLocation(130, 235);
 		
 		// 다음 프레임으로 넘어가기 
 		startWords.addMouseListener(new MouseAdapter() {
@@ -65,8 +65,8 @@ public class FristMain extends JFrame {
 		// 이어하기
 		Image secondImg = new ImageIcon("image/이어서.png").getImage().getScaledInstance(240, 100, Image.SCALE_SMOOTH);
 		JLabel seondWords = new JLabel(new ImageIcon(secondImg));
-		seondWords.setSize(300, 300);
-		seondWords.setLocation(130, 290);
+		seondWords.setSize(240, 100);
+		seondWords.setLocation(130, 360);
 		
 		seondWords.addMouseListener(new MouseAdapter() {
 
@@ -83,8 +83,8 @@ public class FristMain extends JFrame {
 		// 순위보기
 		Image rankImg = new ImageIcon("image/순위.png").getImage().getScaledInstance(240, 100, Image.SCALE_SMOOTH);
 		JLabel rankWords = new JLabel(new ImageIcon(rankImg));
-		rankWords.setSize(300, 300);
-		rankWords.setLocation(130, 440);
+		rankWords.setSize(240, 100);
+		rankWords.setLocation(130, 485);
 		
 		
 		// rankList로 넘어가기 위함.
