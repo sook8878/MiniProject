@@ -190,15 +190,15 @@ public class chap01Choice1 extends JFrame {
 				int stage2 = Integer.parseInt(num);
 				stage2++;
 				
-//				String lovePointnum = lovePointLabel.getText();
-//				int lovePoint = Integer.parseInt(lovePointnum);
-//				lovePoint += 10; //호감도 증가하는 값 일단 임의로 그냥 넣음 나중에 수정해야함
+				String lovePointnum = lovePointLabel.getText();
+				int lovePoint = Integer.parseInt(lovePointnum);
+				lovePoint += 10; //호감도 증가하는 값 일단 임의로 그냥 넣음 나중에 수정해야함
 				
-				int lvp = lovePoint + 2000;
+				
 				System.out.println("========================" + lovePoint+"==================================");
 				//미니게임 gui 호출
 				CardGame.startView(); //시작팝업
-				GameFrame game = new GameFrame(name, stage2, lvp);
+				GameFrame game = new GameFrame(name, stage2, lovePoint);
 			}
 
 		});
