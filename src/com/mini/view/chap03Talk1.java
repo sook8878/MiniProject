@@ -25,6 +25,7 @@ public class chap03Talk1 extends JFrame {
 
 	public chap03Talk1(String name, int stage, int lovePoint) {
 
+		JFrame jframe = this;
 		// 프레임 설정
 		this.setSize(1000, 680);
 		this.setTitle("시뮬레이션");
