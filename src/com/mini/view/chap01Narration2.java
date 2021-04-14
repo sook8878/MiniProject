@@ -9,6 +9,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -25,6 +27,7 @@ public class chap01Narration2 extends JFrame {
 
 	public chap01Narration2(String name, int stage, int lovePoint) {
 
+		JFrame jframe = this;
 		// 프레임 설정
 		this.setSize(1000, 680);
 		this.setTitle("시뮬레이션");
@@ -87,8 +90,7 @@ public class chap01Narration2 extends JFrame {
 		talkBackGround.setBounds(20, 335, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel(
-				"<html>무사히 출근 완료... 이곳이 내가 일할 곳이구나 !! 생각보다 맘에 드는걸? <br><html>");
+		JLabel talk = new JLabel("<html>무사히 출근 완료... 이곳이 내가 일할 곳이구나 !! 생각보다 맘에 드는걸? <br><html>");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 
@@ -99,8 +101,21 @@ public class chap01Narration2 extends JFrame {
 		Image nextImg = new ImageIcon("image/next.png").getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH);
 		JLabel next = new JLabel(new ImageIcon(nextImg));
 
-		// 하단 다음 이미지의 크기, 위치 조정
-		next.setBounds(750, 150, 150, 80);
+		Timer timer = new Timer();
+		TimerTask timerTask = new TimerTask() {
+
+			@Override
+			public void run() {
+
+				next.setBounds(750, 150, 150, 80);
+				talkBackGround.add(next);
+				jframe.repaint();
+
+			}
+		};
+
+		// 다음 버튼이 쪼금 더 천천히 나왔으면 좋겠다 싶으면 1000보다 높은 숫자로 수정하세용
+		timer.schedule(timerTask, 1000);
 
 		// 매개변수로 전달받은 스테이지 번호를 넘겨주기 위한 작업
 		String stageNum = String.valueOf(stage);
@@ -130,10 +145,10 @@ public class chap01Narration2 extends JFrame {
 		closewords.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
+
 				String num = test.getText();
 				int stage1 = Integer.parseInt(num);
-				
+
 				new warning(name, stage1, lovePoint);
 			}
 		});

@@ -9,6 +9,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -18,13 +20,14 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class chap01Talk4 extends JFrame {
-	
+
 	public chap01Talk4() {
-		
+
 	}
-	
+
 	public chap01Talk4(String name, int stage, int lovePoint) {
 
+		JFrame jframe = this;
 		// 프레임 설정
 		this.setSize(1000, 680);
 		this.setTitle("시뮬레이션");
@@ -52,17 +55,17 @@ public class chap01Talk4 extends JFrame {
 		String img = "";
 
 		if (lovePoint >= 80) {
-			
+
 			img = "image/loveBar3.png";
 
 		} else if (lovePoint >= 50) {
 
 			img = "image/loveBar2.png";
 		} else {
-			
+
 			img = "image/loveBar1.png";
 		}
-		
+
 		// 상단 호감도 표시
 		Image loveBarImg = new ImageIcon(img).getImage();
 		loveBarImg.getScaledInstance(130, 330, Image.SCALE_SMOOTH);
@@ -98,14 +101,27 @@ public class chap01Talk4 extends JFrame {
 		Image nextImg = new ImageIcon("image/next.png").getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH);
 		JLabel next = new JLabel(new ImageIcon(nextImg));
 
-		// 하단 다음 이미지의 크기, 위치 조정
-		next.setBounds(750, 150, 150, 80);
-		
-		// 매개변수로 전달받은 스테이지 번호를 넘겨주기 위한 작업 
+		Timer timer = new Timer();
+		TimerTask timerTask = new TimerTask() {
+
+			@Override
+			public void run() {
+
+				next.setBounds(750, 150, 150, 80);
+				talkBackGround.add(next);
+				jframe.repaint();
+				System.out.println("==");
+
+			}
+		};
+
+		timer.schedule(timerTask, 1000);
+
+		// 매개변수로 전달받은 스테이지 번호를 넘겨주기 위한 작업
 		String stageNum = String.valueOf(stage);
 		JLabel test = new JLabel(stageNum);
 		test.setVisible(false);
-		
+
 		// 매개변수로 전달받은 호감도 넘겨주기 위한 작업
 		String lovePointNum = String.valueOf(lovePoint);
 		JLabel lovePointLabel = new JLabel(lovePointNum);
@@ -129,24 +145,24 @@ public class chap01Talk4 extends JFrame {
 		closewords.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
+
 				String num = test.getText();
 				int stage1 = Integer.parseInt(num);
-				
+
 				new warning(name, stage1, lovePoint);
 			}
 		});
-		
+
 		// 다음 버튼 이벤트 -> 화면 전환
 		next.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				chap01Talk4.this.dispose();
-				
+
 				String num = test.getText();
 				int stage2 = Integer.parseInt(num);
 				stage2++;
-				
+
 				new chap01Choice1(name, stage2, lovePoint);
 			}
 		});

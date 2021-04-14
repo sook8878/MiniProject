@@ -30,6 +30,7 @@ public class badEnd extends JFrame {
 	}
 
 	public badEnd(String name, int stage, int lovePoint) {
+		JFrame jframe = this;
 
 		// 프레임 설정
 		this.setSize(1000, 680);
@@ -78,16 +79,26 @@ public class badEnd extends JFrame {
 
 		// 하단 대화 테두리의 대화라벨 추가
 		talkBackGround.add(talk);
-
+		
 		// 하단 다음 이미지
 		Image nextImg = new ImageIcon("image/next.png").getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH);
 		JLabel next = new JLabel(new ImageIcon(nextImg));
 
-		// 하단 다음 이미지의 크기, 위치 조정
-		next.setBounds(750, 150, 150, 80);
-		
-		// 하단 대화 테두리의 다음 이미지 추가
-		talkBackGround.add(next);
+		Timer timer = new Timer();
+		TimerTask timerTask = new TimerTask() {
+
+			@Override
+			public void run() {
+
+				next.setBounds(750, 150, 150, 80);
+				talkBackGround.add(next);
+				jframe.repaint();
+
+			}
+		};
+
+		// 다음 버튼이 쪼금 더 천천히 나왔으면 좋겠다 싶으면 1000보다 높은 숫자로 수정하세용
+		timer.schedule(timerTask, 1000);
 
 		// panel에 추가
 		pan.add(person);
