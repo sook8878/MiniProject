@@ -87,10 +87,10 @@ public class chap03Talk1 extends JFrame {
 		talkBackGround.setBounds(20, 335, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel("<html>" + name + " : 좋아요! 이 골목만 돌아가면 바로 집이에요 (두근두근)<br><br>"
-				                + "( 선배가 우리집을 데려다준다고,,!?!?!?!?!!????!?) </html>");
+		JLabel talk = new JLabel("<html>( 선배가 우리집을 데려다준다고,,!?!?!?!?!!????!?)<br><br> " + name + " : 좋아요! 이 골목만 돌아가면 바로 집이에요 (두근두근)<br><br>"
+				                + "</html>");
 		talk.setBounds(50, -50, 1000, 350);
-		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
+		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 33));
 
 		// 하단 대화 테두리의 대화라벨 추가
 		talkBackGround.add(talk);

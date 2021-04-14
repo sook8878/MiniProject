@@ -11,7 +11,6 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.LinkedHashSet;
 import java.util.Random;
-import java.util.Scanner;
 import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -23,7 +22,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import com.mini.view.chap03Narration1;
+import com.mini.view.chap03Narration0;
 import com.mini.view.warning;
 
 public class NumberGame extends JFrame {
@@ -135,7 +134,7 @@ public class NumberGame extends JFrame {
 					    dispose();
 
 	                    /* 다음 스테이지 호출 */
-	                    new chap03Narration1(name, stage, lovePoint);					    
+	                    new chap03Narration0(name, stage, lovePoint);					    
 					}
 				} 
 			}
@@ -240,7 +239,7 @@ public class NumberGame extends JFrame {
 		                    dispose();
 		                    
 		                    /* 다음 스테이지 호출 */
-		                    new chap03Narration1(name, stage, lovePoint);
+		                    new chap03Narration0(name, stage, lovePoint);
 		                  }
 		                  
 		               } else {
@@ -265,7 +264,7 @@ public class NumberGame extends JFrame {
 		                  dispose();
 		               
 		                  /* 다음 스테이지 호출 */
-		                  new chap03Narration1(name, stage, lovePoint);
+		                  new chap03Narration0(name, stage, lovePoint);
 		                  }
 		               
 					}	

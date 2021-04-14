@@ -7,7 +7,8 @@ public class run {
 		
 		new FristMain();
 		
-		//new chap01Narration9("a",1,50);
+//		new chap03Narration1("호동이", 1, 1);
+//		new chap01Choice1("a",1,50);
 		
 	}
 }

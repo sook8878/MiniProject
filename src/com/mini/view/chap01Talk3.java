@@ -91,7 +91,7 @@ public class chap01Talk3 extends JFrame {
 
 		// 하단 대화 내용
 		JLabel talk = new JLabel(
-				"<html>선호 :  " + name + "이가 바닐라라떼 좋아했던 것 같은데 맞지 ?<br><br>" + "( 직원에게 말하며 )아이스 바닐라 라떼 두 잔 주세요.</html>");
+				"<html>선호 :  " + name + "이가 바닐라라떼 좋아했던 것 같은데 맞지 ?<br><br>" + "( 직원에게 )아이스 바닐라 라떼 두 잔 주세요.</html>");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 

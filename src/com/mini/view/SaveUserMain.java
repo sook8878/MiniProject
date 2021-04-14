@@ -107,87 +107,132 @@ public class SaveUserMain extends JFrame {
 							new chap01Narration1(name, stage, lovePoint);
 							break;
 						case 2:
-							new chap01Talk1(name, stage, lovePoint);
+							new chap01Narration2(name, stage, lovePoint);
 							break;
 						case 3:
-							new chap01Talk2(name, stage, lovePoint);
+							new chap01Narration3(name, stage, lovePoint);
 							break;
 						case 4:
-							new chap01Talk3(name, stage, lovePoint);
+							new chap01Narration4(name, stage, lovePoint);
 							break;
 						case 5:
-							new chap01Talk4(name, stage, lovePoint);
+							new chap01Narration5(name, stage, lovePoint);
 							break;
 						case 6:
-							new chap01Choice1(name, stage, lovePoint);
+							new chap01Narration6(name, stage, lovePoint);
 							break;
 						case 7:
-							new chap02Narration1(name, stage, lovePoint);
+							new chap01Narration8(name, stage, lovePoint);
 							break;
 						case 8:
-							new chap02Talk1(name, stage, lovePoint);
+							new chap01Narration9(name, stage, lovePoint);
 							break;
 						case 9:
-							new chap02Talk2(name, stage, lovePoint);
+							new chap01Talk1(name, stage, lovePoint);
 							break;
 						case 10:
-							new chap02Talk3(name, stage, lovePoint);
+							new chap01Talk2(name, stage, lovePoint);
 							break;
 						case 11:
-							new chap02Choice1(name, stage, lovePoint);
+							new chap01Talk3(name, stage, lovePoint);
 							break;
 						case 12:
-							new chap03Narration1(name, stage, lovePoint);
+							new chap01Talk4(name, stage, lovePoint);
 							break;
 						case 13:
-							new chap03Narration2(name, stage, lovePoint);
+							new chap01Choice1(name, stage, lovePoint);
 							break;
 						case 14:
-							new chap03Talk1(name, stage, lovePoint);
+							new chap02Narration0(name, stage, lovePoint);
 							break;
 						case 15:
-							new chap03Talk2(name, stage, lovePoint);
+							new chap02Narration1(name, stage, lovePoint);
 							break;
 						case 16:
-							new chap03Talk3(name, stage, lovePoint);
+							new chap02Narration2(name, stage, lovePoint);
 							break;
 						case 17:
-							new chap03Talk4(name, stage, lovePoint);
+							new chap02Narration3(name, stage, lovePoint);
 							break;
 						case 18:
-							new chap03Talk5(name, stage, lovePoint);
+							new chap02Narration4(name, stage, lovePoint);
 							break;
 						case 19:
-							new chap03Talk6(name, stage, lovePoint);
+							new chap02Narration5(name, stage, lovePoint);
 							break;
 						case 20:
-							new chap03Talk7(name, stage, lovePoint);
+							new chap02Talk1(name, stage, lovePoint);
 							break;
 						case 21:
-							new chap03Talk8(name, stage, lovePoint);
+							new chap02Talk2(name, stage, lovePoint);
 							break;
 						case 22:
-							new chap04Narration1(name, stage, lovePoint);
+							new chap02Talk3(name, stage, lovePoint);
 							break;
 						case 23:
-							new chap04Narration2(name, stage, lovePoint);
+							new chap02Choice1(name, stage, lovePoint);
 							break;
 						case 24:
-							new chap04Talk1(name, stage, lovePoint);
+							new chap03Narration0(name, stage, lovePoint);
 							break;
 						case 25:
-							new chap04Talk2(name, stage, lovePoint);
+							new chap03Narration1(name, stage, lovePoint);
 							break;
 						case 26:
-							new chap04Talk3(name, stage, lovePoint);
+							new chap03Narration2(name, stage, lovePoint);
 							break;
 						case 27:
-							new chap04Talk4(name, stage, lovePoint);
+							new chap03Narration3(name, stage, lovePoint);
 							break;
 						case 28:
+							new chap03Talk1(name, stage, lovePoint);
+							break;
+						case 29:
+							new chap03Talk2(name, stage, lovePoint);
+							break;
+						case 30:
+							new chap03Talk3(name, stage, lovePoint);
+							break;
+						case 31:
+							new chap03Talk4(name, stage, lovePoint);
+							break;
+						case 32:
+							new chap03Talk5(name, stage, lovePoint);
+							break;
+						case 33:
+							new chap03Talk6(name, stage, lovePoint);
+							break;
+						case 34:
+							new chap03Talk7(name, stage, lovePoint);
+							break;
+						case 35:
+							new chap03Talk8(name, stage, lovePoint);
+							break;
+						case 36:
+							new chap04Narration0(name, stage, lovePoint);
+							break;
+						case 37:
+							new chap04Narration1(name, stage, lovePoint);
+							break;
+						case 38:
+							new chap04Narration2(name, stage, lovePoint);
+							break;
+						case 39:
+							new chap04Talk1(name, stage, lovePoint);
+							break;
+						case 40:
+							new chap04Talk2(name, stage, lovePoint);
+							break;
+						case 41:
+							new chap04Talk3(name, stage, lovePoint);
+							break;
+						case 42:
+							new chap04Talk4(name, stage, lovePoint);
+							break;
+						case 43:
 							new chap04Talk5(name, stage, lovePoint);
 							break;
-
+							
 						}
 					} else {
 						// 존재하지 않을 시 경고창.

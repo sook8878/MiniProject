@@ -90,7 +90,7 @@ public class chap03Talk3 extends JFrame {
 		JLabel talk = new JLabel("<html>(예상보다 어두운 골목에 당황한 선호씨)<br><br>"
 				+ "(멀리서 들려오는 고양이 울음소리 : 야옹~)</html>");
 		talk.setBounds(50, -50, 1000, 350);
-		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
+		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 33));
 
 		// 하단 대화 테두리의 대화라벨 추가
 		talkBackGround.add(talk);

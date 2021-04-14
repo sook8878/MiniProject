@@ -162,7 +162,7 @@ public class chap02Choice1 extends JFrame {
 				lovePoint -= 20; //호감도 증가하는 값 일단 임의로 그냥 넣음 나중에 수정해야함
 				System.out.println(lovePoint);
 				
-				new chap03Narration1(name, stage2, lovePoint);
+				new chap03Narration0(name, stage2, lovePoint);
 			}
 
 		});

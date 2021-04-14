@@ -87,10 +87,10 @@ public class chap03Narration1 extends JFrame {
 		talkBackGround.setBounds(20, 335, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel("<html>회사에서 새 프로젝트에 들어가게 되었고,<br>" + "대리님께서 선배와 함께 현장조사를 다녀오라고 하셨다.<br>"
-				+ "대리님 감사합니다..! 선배와 단 둘이라니!</html>");
+		JLabel talk = new JLabel("<html>회사에서 새 프로젝트에 들어가게 되었는데,<br>" + "선호선배와 함께 현장조사를 다녀오라고 배정받게되었다<br><br>"
+				+ "대리님 감사합니다..! 선배와 단 둘이 외근이라니!</html>");
 		talk.setBounds(50, -50, 1000, 350);
-		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
+		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 33));
 
 		// 하단 대화 테두리의 대화라벨 추가
 		talkBackGround.add(talk);
