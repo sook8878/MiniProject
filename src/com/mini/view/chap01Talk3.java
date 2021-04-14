@@ -45,7 +45,7 @@ public class chap01Talk3 extends JFrame {
 		pan.setBackground(b);
 
 		// 상단에 사람 이미지
-		Image personImg = new ImageIcon("image/나레이션1.png").getImage();
+		Image personImg = new ImageIcon("image/선호아바라.png").getImage();
 		personImg.getScaledInstance(780, 300, Image.SCALE_SMOOTH);
 		JLabel person = new JLabel(new ImageIcon(personImg));
 
@@ -90,8 +90,8 @@ public class chap01Talk3 extends JFrame {
 		talkBackGround.setBounds(20, 335, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel(
-				"<html>선호 :  " + name + "이가 바닐라라떼 좋아했던 것 같은데 맞지 ?<br><br>" + "( 직원에게 말하며 )아이스 바닐라 라떼 두 잔 주세요.</html>");
+		JLabel talk = new JLabel("<html>선호 :  " + name + "이가 바닐라라떼 좋아했던 것 같은데 맞지 ?<br><br>" + "(직원에게) 아이스 바닐라 라떼 두 잔 주세요.</html>");
+
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 

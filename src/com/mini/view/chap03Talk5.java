@@ -42,7 +42,7 @@ public class chap03Talk5 extends JFrame {
 		pan.setBackground(b);
 
 		// 상단에 사람 이미지
-		Image personImg = new ImageIcon("image/나레이션1.png").getImage();
+		Image personImg = new ImageIcon("image/scarycat.jpg").getImage();
 		personImg.getScaledInstance(780, 300, Image.SCALE_SMOOTH);
 		JLabel person = new JLabel(new ImageIcon(personImg));
 
@@ -89,9 +89,9 @@ public class chap03Talk5 extends JFrame {
 		// 하단 대화 내용
 		JLabel talk = new JLabel("<html>" + name + " : 아맞다 선배 !<br><br>"
 				                + "이따가 집에 돌아가는 길에 조심하세요!<br><br>"
-				                + "이 근처에 유명한 도둑 고양이가 도사리고 있어요</html>");
+				                + "이 근처에 유명한 도둑 고양이가 도사리고 있어요..</html>");
 		talk.setBounds(50, -50, 1000, 350);
-		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
+		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 33));
 
 		// 하단 대화 테두리의 대화라벨 추가
 		talkBackGround.add(talk);

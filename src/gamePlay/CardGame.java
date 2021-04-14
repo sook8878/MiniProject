@@ -19,7 +19,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.Timer;
 
-import com.mini.view.chap02Narration1;
+import com.mini.view.chap02Narration0;
 import com.mini.view.warning;
 
 public class CardGame extends JFrame {
@@ -202,11 +202,11 @@ public class CardGame extends JFrame {
 
 		    if(moveChap == 1) { //게임성공시
 		    	lovePoint += 20;
-		    	new chap02Narration1(name, stage, lovePoint); //호감도 증가 후 이동
+		    	new chap02Narration0(name, stage, lovePoint); //호감도 증가 후 이동
 		    	
 		    } else if (moveChap == 2) { //게임실패시
 		    	lovePoint -= 20;
-		    	new chap02Narration1(name, stage, lovePoint); //호감도 감소 후 이동
+		    	new chap02Narration0(name, stage, lovePoint); //호감도 감소 후 이동
 		    } 	
 		}
 

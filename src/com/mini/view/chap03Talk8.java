@@ -44,7 +44,7 @@ public class chap03Talk8 extends JFrame {
 		pan.setBackground(b);
 
 		// 상단에 사람 이미지
-		Image personImg = new ImageIcon("image/나레이션1.png").getImage();
+		Image personImg = new ImageIcon("image/thiefkitten.jpg").getImage();
 		personImg.getScaledInstance(780, 300, Image.SCALE_SMOOTH);
 		JLabel person = new JLabel(new ImageIcon(personImg));
 
@@ -89,7 +89,7 @@ public class chap03Talk8 extends JFrame {
 		talkBackGround.setBounds(20, 335, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel("<html>도둑고양이 : 키야옹~</html>");
+		JLabel talk = new JLabel("<html>도둑고양이 : 이 지갑은 내거다옹~</html>");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 

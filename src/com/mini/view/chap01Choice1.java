@@ -168,7 +168,7 @@ public class chap01Choice1 extends JFrame {
 				
 				lovePoint -= 10; //호감도 증가하는 값 일단 임의로 그냥 넣음 나중에 수정해야함
 				
-			    new chap02Narration1(name, stage2, lovePoint); //챕터2로 바로 이동
+			    new chap02Narration0(name, stage2, lovePoint); //챕터2로 바로 이동
 			}
 			
 
