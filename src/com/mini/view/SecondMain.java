@@ -135,10 +135,10 @@ public class SecondMain extends JFrame {
 		});
 		
 		// 남자 주인공 사진
-		Image sunhoImg = new ImageIcon("image/sunho5.jpg").getImage().getScaledInstance(700, 400, 0);
+		Image sunhoImg = new ImageIcon("image/선호꽃2.png").getImage().getScaledInstance(1006, 908, 0);
 		JLabel sunhowords = new JLabel(new ImageIcon(sunhoImg));
-		sunhowords.setLocation(100, 50);
-		sunhowords.setSize(700, 300);
+		sunhowords.setLocation(0, 0);
+		sunhowords.setSize(1006, 908);
 
 		// 닫기 버튼
 		Image closeImg = new ImageIcon("image/close.png").getImage().getScaledInstance(50, 50, 0);
