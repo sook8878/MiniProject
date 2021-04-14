@@ -87,10 +87,10 @@ public class chap03Talk4 extends JFrame {
 		talkBackGround.setBounds(20, 335, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel("<html>선호 : 골목이 너무 어둡네,<br><br>"
+		JLabel talk = new JLabel("<html>선호 : 골목이 너무 어둡네,<br>"
 				                + "야근하고 집에 갈때 조심해야겠다.</html>");
 		talk.setBounds(50, -50, 1000, 350);
-		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
+		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 33));
 
 		// 하단 대화 테두리의 대화라벨 추가
 		talkBackGround.add(talk);

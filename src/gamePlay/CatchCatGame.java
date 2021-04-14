@@ -15,7 +15,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import com.mini.view.chap04Narration1;
+import com.mini.view.chap04Narration0;
 import com.mini.view.warning;
 
 
@@ -199,7 +199,7 @@ public class CatchCatGame extends JFrame  {
 						      
 							      
 				        JOptionPane.showMessageDialog(null, TimeEnd,"실패 ㅠㅠ",JOptionPane.ERROR_MESSAGE);
-						new chap04Narration1(name,stage,timeEndGameLovePoint);
+						new chap04Narration0(name,stage,timeEndGameLovePoint);
 						dispose();
 						
 					}
@@ -270,7 +270,7 @@ public class CatchCatGame extends JFrame  {
 						      
 						    dispose();
 						     
-						    new chap04Narration1(name,stage,successGameLovePoint);
+						    new chap04Narration0(name,stage,successGameLovePoint);
 							
 						}
 			
@@ -307,7 +307,7 @@ public class CatchCatGame extends JFrame  {
 						      
 						    JOptionPane.showMessageDialog(null, BeforeGame,"실패 ㅜㅜ",JOptionPane.ERROR_MESSAGE);
 						    
-						    new chap04Narration1(name,stage,failGameLovePoint);
+						    new chap04Narration0(name,stage,failGameLovePoint);
 
 							
 							dispose();

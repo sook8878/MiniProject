@@ -89,7 +89,7 @@ public class chap03Talk2 extends JFrame {
 		// 하단 대화 내용
 		JLabel talk = new JLabel("<html>선호 :  금방이네~ 가자 저녁되니 쌀쌀하네</html>");
 		talk.setBounds(50, -50, 1000, 350);
-		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
+		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 33));
 
 		// 하단 대화 테두리의 대화라벨 추가
 		talkBackGround.add(talk);

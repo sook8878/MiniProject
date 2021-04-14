@@ -87,10 +87,10 @@ public class chap03Narration2 extends JFrame {
 		talkBackGround.setBounds(20, 335, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel("<html>외근이 생각보다 길어져 늦은 퇴근을 하는데, 선배가 저녁을 먹자고 했다.<br>"
-				+ "하루종일 선배랑 둘이서 일했는데 저녁까지 먹는다니...<br>" + "이렇게 행복한 날이 또 있을까...</html>");
+		JLabel talk = new JLabel("<html>외근이 생각보다 길어져 늦은 퇴근을 하는데,<br> 선배가 저녁을 먹고가자고 했다.<br><br>"
+				+ "하루종일 선배랑 둘이 일하느라 붙어있었는데 저녁까지 함께 먹는다니...<br>" + "이렇게 행복한 날이 또 있을까...?</html>");
 		talk.setBounds(50, -50, 1000, 350);
-		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
+		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 33));
 
 		// 하단 대화 테두리의 대화라벨 추가
 		talkBackGround.add(talk);
@@ -148,7 +148,7 @@ public class chap03Narration2 extends JFrame {
 				int stage2 = Integer.parseInt(num);
 				stage2++;
 
-				new chap03Talk2(name, stage2, lovePoint);
+				new chap03Narration3(name, stage2, lovePoint);
 			}
 		});
 

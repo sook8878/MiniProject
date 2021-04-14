@@ -91,7 +91,7 @@ public class chap01Narration4 extends JFrame {
 
 		// 하단 대화 내용
 		JLabel talk = new JLabel(
-				"<html>무사히 출근 후 자리배치를 받았지만<br><br>뭘 할지몰라 눈치만 보며 앉아있다... <br> <html>");
+				"<html>무사히 출근 후 자리배치를 받았지만,<br><br>뭘 할지몰라 눈치만 보며 앉아있다... <br> <html>");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 

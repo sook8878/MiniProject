@@ -87,8 +87,8 @@ public class chap03Talk7 extends JFrame {
 		talkBackGround.setBounds(20, 335, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel("<html>같이 길을 걷다가 골목길에서 갑자기 무언가 튀어 나오는데!!<br>" + "그건 바로 이 일대에서 유명한 도둑 고양이!!<br>"
-				+ "선호씨의 소중한 지갑을 물고 훔쳐가는데!</html>");
+		JLabel talk = new JLabel("<html>같이 길을 걷다가 골목길에서 갑자기 무언가 튀어 나오는데!!<br><br>" + "그건 바로 이 일대에서 유명한 도둑 고양이!!<br>"
+				+ "선호씨의 소중한 지갑을 물고 훔쳐가는데!!!</html>");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 
