@@ -107,7 +107,7 @@ public class chap03Narration0 extends JFrame {
 			@Override
 			public void run() {
 
-				next.setBounds(790, 150, 150, 80);
+				next.setBounds(785, 150, 150, 80);
 				talkBackGround.add(next);
 				jframe.repaint();
 
