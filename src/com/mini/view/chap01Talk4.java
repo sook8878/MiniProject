@@ -45,7 +45,7 @@ public class chap01Talk4 extends JFrame {
 		pan.setBackground(b);
 
 		// 상단에 사람 이미지
-		Image personImg = new ImageIcon("image/Inked카페이벤트.jpg").getImage();
+		Image personImg = new ImageIcon("image/카페알바.png").getImage();
 		personImg.getScaledInstance(780, 300, Image.SCALE_SMOOTH);
 		JLabel person = new JLabel(new ImageIcon(personImg));
 
@@ -62,7 +62,7 @@ public class chap01Talk4 extends JFrame {
 
 			img = "image/loveBar2.png";
 		} else {
-
+			
 			img = "image/loveBar1.png";
 		}
 

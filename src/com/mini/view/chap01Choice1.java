@@ -45,7 +45,7 @@ public class chap01Choice1 extends JFrame {
 		pan.setBackground(b);
 
 		// 상단에 사람 이미지
-		Image personImg = new ImageIcon("image/나레이션1.png").getImage();
+		Image personImg = new ImageIcon("image/카페알바.png").getImage();
 		personImg.getScaledInstance(780, 300, Image.SCALE_SMOOTH);
 		JLabel person = new JLabel(new ImageIcon(personImg));
 
@@ -105,9 +105,9 @@ public class chap01Choice1 extends JFrame {
 		JButton choice3_btn = new JButton();
 
 		// 선택지 버튼의 라벨
-		JLabel choiec1_lb = new JLabel("<html>우와 재밌겠다~<br><br>선배 우리 한번 해봐요 !!</html>");
-		JLabel choiec2_lb = new JLabel("<html>저희 시간 별로 없지 않아요?<br><br>괜찮습니다 그냥 주세요</html>");
-		JLabel choiec3_lb = new JLabel("<html>오빠(하트만땅)<br>저만 믿으세요.<br><br>제가 커피 따올게요</html>");
+		JLabel choiec1_lb = new JLabel("<html>네 좋아요.<br><br>한번 해볼게요!</html>");
+		JLabel choiec2_lb = new JLabel("<html>저희 시간 별로 없지 않아요?<br><br>괜찮습니다 그냥 주세요.</html>");
+		JLabel choiec3_lb = new JLabel("<html>오빠♡♥♡♥<br><br>저만 믿으세요!!<br><br>제가 커피 따올게요!!</html>");
 
 		// 선택지 버튼의 크기, 위치 조정
 		choice1_btn.setBounds(50, 50, 250, 180);
@@ -138,7 +138,7 @@ public class chap01Choice1 extends JFrame {
 				
 				String lovePointnum = lovePointLabel.getText();
 				int lovePoint = Integer.parseInt(lovePointnum);
-				lovePoint += 10; //호감도 증가하는 값 일단 임의로 그냥 넣음 나중에 수정해야함
+				lovePoint += 15; //호감도 증가하는 값 일단 임의로 그냥 넣음 나중에 수정해야함
 				
 				//미니게임 gui 호출
 				CardGame.startView(); //시작팝업
@@ -192,7 +192,7 @@ public class chap01Choice1 extends JFrame {
 				
 				String lovePointnum = lovePointLabel.getText();
 				int lovePoint = Integer.parseInt(lovePointnum);
-				lovePoint += 10; //호감도 증가하는 값 일단 임의로 그냥 넣음 나중에 수정해야함
+				lovePoint += 5; //호감도 증가하는 값 일단 임의로 그냥 넣음 나중에 수정해야함
 				
 				
 				System.out.println("========================" + lovePoint+"==================================");

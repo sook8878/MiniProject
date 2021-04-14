@@ -315,7 +315,7 @@ public class CardGame extends JFrame {
 	/* 성공 팝업창 */
 	static void successView() {
 		
-		JLabel success = new JLabel("카드 맞추기 성공 !",SwingConstants.CENTER);
+		JLabel success = new JLabel("<html>카드 맞추기 성공 !<br><br>아이스 바닐라라떼 2잔<br>금방 준비해드릴게요~!<br><br></html>",SwingConstants.CENTER);
 		success.setFont(new Font("배달의민족 주아", Font.PLAIN, 16));
 		
 		JOptionPane fin = new JOptionPane(); //성공 팝업창
@@ -324,7 +324,7 @@ public class CardGame extends JFrame {
 	
 	/* 실패 팝업창 */
 	static void failView() {
-		JLabel fail = new JLabel("카드 맞추기 실패 ㅠ_ㅠ",SwingConstants.CENTER);
+		JLabel fail = new JLabel("<html>카드 맞추기 실패 ㅠ_ㅠ<br><br>아이스 바닐라라떼 2잔<br>결제 부탁드려요 손님 ^ㅡ^<br><br></html>",SwingConstants.CENTER);
 		fail.setFont(new Font("배달의민족 주아", Font.PLAIN, 16));
 		
 		JOptionPane fin = new JOptionPane(); //실패 팝업창
