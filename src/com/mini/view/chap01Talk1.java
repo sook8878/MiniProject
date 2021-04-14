@@ -27,6 +27,7 @@ public class chap01Talk1 extends JFrame {
 	}
 
 	public chap01Talk1(String name, int stage, int lovePoint) {
+
 		JFrame jframe = this;
 		// 프레임 설정
 		this.setSize(1000, 680);
