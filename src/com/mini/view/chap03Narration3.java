@@ -9,6 +9,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -99,8 +101,21 @@ public class chap03Narration3 extends JFrame {
 		Image nextImg = new ImageIcon("image/next.png").getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH);
 		JLabel next = new JLabel(new ImageIcon(nextImg));
 
-		// 하단 다음 이미지의 크기, 위치 조정
-		next.setBounds(750, 150, 150, 80);
+		Timer timer = new Timer();
+		TimerTask timerTask = new TimerTask() {
+
+			@Override
+			public void run() {
+
+				next.setBounds(750, 150, 150, 80);
+				talkBackGround.add(next);
+				jframe.repaint();
+
+			}
+		};
+
+		// 다음 버튼이 쪼금 더 천천히 나왔으면 좋겠다 싶으면 1000보다 높은 숫자로 수정하세용
+		timer.schedule(timerTask, 1000);
 
 		// 매개변수로 전달받은 스테이지 번호를 넘겨주기 위한 작업
 		String stageNum = String.valueOf(stage);
