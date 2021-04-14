@@ -1,6 +1,6 @@
 package com.mini.run;
 
-import com.mini.view.chap02Narration0;
+import com.mini.view.chap02Talk2;
 
 public class run {
 	public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class run {
 		
 //		new chap03Narration1("호동이", 1, 1);
 //		new chap01Choice1("a",1,50);
-		new chap02Narration0("a",1,50);
+		new chap02Talk2("a",1,50);
 
 	}
 }

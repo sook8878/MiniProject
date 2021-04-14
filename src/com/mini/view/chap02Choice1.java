@@ -44,7 +44,7 @@ public class chap02Choice1 extends JFrame {
 		pan.setBackground(b);
 
 		// 상단에 사람 이미지
-		Image personImg = new ImageIcon("image/나레이션1.png").getImage();
+		Image personImg = new ImageIcon("image/부장술2.png").getImage();
 		personImg.getScaledInstance(780, 300, Image.SCALE_SMOOTH);
 		JLabel person = new JLabel(new ImageIcon(personImg));
 
@@ -103,8 +103,8 @@ public class chap02Choice1 extends JFrame {
 		JButton choice2_btn = new JButton();
 
 		// 선택지 버튼의 라벨
-		JLabel choiec1_lb = new JLabel("<html>(벌떡 일어나서) 부장님!<br><br>신입사원인 제가 한잔 부장님 마지막 술 받아도 되겠습니까!?<br><br>저랑 한잔 하시죠!!!</html>");
-		JLabel choiec2_lb = new JLabel("<html>(나도 이미 많이 마셔서..)<br><br>선호를 안쓰럽게 쳐다보고 부장님이랑 눈을 마주치지 않는다.</html>");
+		JLabel choiec1_lb = new JLabel("<html>(벌떡 일어나서) 부장님!<br><br>신입사원인 제가 부장님 마지막 술<br>한 잔 받아도 되겠습니까!?<br><br>저랑 한잔 하시죠!!!</html>");
+		JLabel choiec2_lb = new JLabel("<html>(나도 이미 많이 마셔서..)<br><br>선호를 안쓰럽게 쳐다보고 부장님이랑<br>눈을 절대 마주치지 않는다.</html>");
 
 		// 선택지 버튼의 크기, 위치 조정
 		choice1_btn.setBounds(50, 50, 380, 180);
