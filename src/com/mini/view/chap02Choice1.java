@@ -133,9 +133,9 @@ public class chap02Choice1 extends JFrame {
 				
 				String lovePointnum = lovePointLabel.getText();
 				int lovePoint = Integer.parseInt(lovePointnum);
-				lovePoint += 10; //호감도 증가하는 값 일단 임의로 그냥 넣음 나중에 수정해야함
+				lovePoint += 10; // 호감도 증가
 				
-				// 현우오빠 게임 부르기
+				/* 숫자 게임 호출 */
 				new NumberGame(name, stage2, lovePoint);
 			}
 
