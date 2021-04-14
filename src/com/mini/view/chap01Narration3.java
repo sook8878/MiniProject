@@ -90,8 +90,7 @@ public class chap01Narration3 extends JFrame {
 		talkBackGround.setBounds(20, 335, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel(
-				"<html>부장님 : "+name+ " 씨는 여기 앉도록 해! 이제 여기가 " +name+" 씨 자리야~!<br><html>");
+		JLabel talk = new JLabel("<html>부장님 : " + name + " 씨는 여기 앉도록 해! 이제 여기가 " + name + " 씨 자리야~!<br><html>");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 
@@ -99,24 +98,24 @@ public class chap01Narration3 extends JFrame {
 		talkBackGround.add(talk);
 
 		// 하단 다음 이미지
-				Image nextImg = new ImageIcon("image/next.png").getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH);
-				JLabel next = new JLabel(new ImageIcon(nextImg));
+		Image nextImg = new ImageIcon("image/next.png").getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH);
+		JLabel next = new JLabel(new ImageIcon(nextImg));
 
-				Timer timer = new Timer();
-				TimerTask timerTask = new TimerTask() {
+		Timer timer = new Timer();
+		TimerTask timerTask = new TimerTask() {
 
-					@Override
-					public void run() {
+			@Override
+			public void run() {
 
-						next.setBounds(750, 150, 150, 80);
-						talkBackGround.add(next);
-						jframe.repaint();
+				next.setBounds(750, 150, 150, 80);
+				talkBackGround.add(next);
+				jframe.repaint();
 
-					}
-				};
+			}
+		};
 
-				// 다음 버튼이 쪼금 더 천천히 나왔으면 좋겠다 싶으면 1000보다 높은 숫자로 수정하세용
-				timer.schedule(timerTask, 1000);
+		// 다음 버튼이 쪼금 더 천천히 나왔으면 좋겠다 싶으면 1000보다 높은 숫자로 수정하세용
+		timer.schedule(timerTask, 1000);
 
 		// 매개변수로 전달받은 스테이지 번호를 넘겨주기 위한 작업
 		String stageNum = String.valueOf(stage);
@@ -146,10 +145,10 @@ public class chap01Narration3 extends JFrame {
 		closewords.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
+
 				String num = test.getText();
 				int stage1 = Integer.parseInt(num);
-				
+
 				new warning(name, stage1, lovePoint);
 			}
 		});
