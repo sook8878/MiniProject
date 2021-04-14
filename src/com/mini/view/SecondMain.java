@@ -50,25 +50,25 @@ public class SecondMain extends JFrame {
 
 		// 이름 글씨
 		JLabel lb = new JLabel("이 름 : ");
-		lb.setLocation(210, 380);
+		lb.setLocation(270, 420);
 		lb.setSize(200, 50);
 		lb.setFont(new Font("배달의민족 주아", Font.PLAIN,20));
 
 		// 이름 적는 필드
 		JTextField tf = new JTextField(20);
-		tf.setLocation(290, 380);
+		tf.setLocation(335, 420);
 		tf.setSize(300, 50);
 		tf.setFont(new Font("배달의민족 주아", Font.PLAIN,20));
 		
 		// 이름 입력해주세요 필드 
 		JLabel text = new JLabel("이름을 입력해주세요");
-		text.setLocation(350, 380);
+		text.setLocation(400, 410);
 		text.setSize(200,200);
 		text.setFont(new Font("배달의민족 주아", Font.PLAIN,25));
 		
 		// 버튼 확인
 		JButton btn = new JButton("확 인");
-		btn.setLocation(600, 380);
+		btn.setLocation(660, 420);
 		btn.setSize(100, 50);
 		btn.setFont(new Font("배달의민족 주아", Font.PLAIN,20));
 		btn.setBackground(Color.pink);
@@ -135,10 +135,10 @@ public class SecondMain extends JFrame {
 		});
 		
 		// 남자 주인공 사진
-		Image sunhoImg = new ImageIcon("image/sunho5.jpg").getImage().getScaledInstance(700, 400, 0);
+		Image sunhoImg = new ImageIcon("image/선호꽃2.png").getImage().getScaledInstance(783, 680, 0);
 		JLabel sunhowords = new JLabel(new ImageIcon(sunhoImg));
-		sunhowords.setLocation(100, 50);
-		sunhowords.setSize(700, 300);
+		sunhowords.setLocation(90, 0);
+		sunhowords.setSize(783, 680);
 
 		// 닫기 버튼
 		Image closeImg = new ImageIcon("image/close.png").getImage().getScaledInstance(50, 50, 0);
