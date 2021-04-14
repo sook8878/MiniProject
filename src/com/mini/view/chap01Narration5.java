@@ -45,7 +45,7 @@ public class chap01Narration5 extends JFrame {
 		pan.setBackground(b);
 
 		// 상단에 사람 이미지
-		Image personImg = new ImageIcon("image/부장님4.png").getImage();
+		Image personImg = new ImageIcon("image/부장자리.jpg").getImage();
 		personImg.getScaledInstance(780, 300, Image.SCALE_SMOOTH);
 		JLabel person = new JLabel(new ImageIcon(personImg));
 
