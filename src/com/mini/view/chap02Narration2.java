@@ -45,7 +45,7 @@ public class chap02Narration2 extends JFrame {
 		pan.setBackground(b);
 
 		// 상단에 사람 이미지
-		Image personImg = new ImageIcon("image/smile_night.jpeg").getImage();
+		Image personImg = new ImageIcon("image/선호일.png").getImage();
 		personImg.getScaledInstance(780, 300, Image.SCALE_SMOOTH);
 		JLabel person = new JLabel(new ImageIcon(personImg));
 
@@ -90,7 +90,7 @@ public class chap02Narration2 extends JFrame {
 		talkBackGround.setBounds(20, 335, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel("<html> 하지만 직장 사수라는 이유로 <br>혹시나 먼저 다가갔다가 멀어지면 어색해질까봐 쉽게 다가갈 수 없었다...<br><br>" + "그렇게 허송세월 하루하루만 진전 없이 시간만 가고있었는데...<br>"
+		JLabel talk = new JLabel("<html> 하지만 직장 사수라는 이유로 쉽게 마음을 표현할 수 없었다.<br><br>" + "그렇게 하루하루 진전 없이 시간만 가고있는데...<br>"
 				+ "<br>이번에도 이렇게 끝낼 수 없어!!</html>");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));

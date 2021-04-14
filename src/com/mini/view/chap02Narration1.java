@@ -45,7 +45,7 @@ public class chap02Narration1 extends JFrame {
 		pan.setBackground(b);
 
 		// 상단에 사람 이미지
-		Image personImg = new ImageIcon("image/나레이션1.png").getImage();
+		Image personImg = new ImageIcon("image/선호대학생.png").getImage();
 		personImg.getScaledInstance(780, 300, Image.SCALE_SMOOTH);
 		JLabel person = new JLabel(new ImageIcon(personImg));
 
@@ -90,7 +90,7 @@ public class chap02Narration1 extends JFrame {
 		talkBackGround.setBounds(20, 335, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel("<html>회사 생활을 하면서 선배는 더 내 마음에 들어왔다...<br><br> 실수를 해서 부장님께 혼나면 위로해주는 선호 선배의 모습을보며<br><br> 대학시절 내가 왜 짝사랑 했는지 기억이 나는것 같다... ");
+		JLabel talk = new JLabel("<html>회사 생활을 하면서 선배는 더 내 마음에 들어왔다...<br><br> 실수를 해서 부장님께 혼나면 위로해주는 선호 선배의 모습을 보며<br><br> 대학시절 내가 왜 짝사랑 했는지 기억이 나는것 같다... ");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 
