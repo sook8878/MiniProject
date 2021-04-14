@@ -87,7 +87,7 @@ public class chap01Talk4 extends JFrame {
 		talkBackGround.setBounds(20, 335, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel("<html>직원 : 저희 카페에서 음료 이벤트 진행중인데 게임 참여해 보시겠어요?</html>");
+		JLabel talk = new JLabel("<html>직원 : 저희 카페에서 음료 이벤트 진행중인데 게임 참여해 보시겠어요?<br><br> 게임에 성공하시면 커피를 무료로 드려요~</html>");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 
