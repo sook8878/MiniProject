@@ -42,7 +42,7 @@ public class chap01Narration1 extends JFrame {
 		pan.setBackground(b);
 
 		// 상단에 사람 이미지
-		Image personImg = new ImageIcon("image/움직도시.gif").getImage();
+		Image personImg = new ImageIcon("image/움직도시2.gif").getImage();
 		personImg.getScaledInstance(780, 300, Image.SCALE_SMOOTH);
 		JLabel person = new JLabel(new ImageIcon(personImg));
 
