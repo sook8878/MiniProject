@@ -17,13 +17,13 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class chap02Narration1 extends JFrame {
+public class chap02Narration5 extends JFrame {
 
-	public chap02Narration1() {
+	public chap02Narration5() {
 
 	}
 
-	public chap02Narration1(String name, int stage, int lovePoint) {
+	public chap02Narration5(String name, int stage, int lovePoint) {
 
 		// 프레임 설정
 		this.setSize(1000, 680);
@@ -87,7 +87,7 @@ public class chap02Narration1 extends JFrame {
 		talkBackGround.setBounds(20, 335, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel("<html>회사 생활을 하면서 선배는 더 내 마음에 들어왔다...<br><br> 실수를 해서 부장님께 혼나면 위로해주는 선호 선배의 모습을보며<br><br> 대학시절 내가 왜 짝사랑 했는지 기억이 나는것 같다... ");
+		JLabel talk = new JLabel("<html> 술자리 분위기는 "+name+" 과 정반대로 무르익어가고 있다...</html>");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 
@@ -141,13 +141,13 @@ public class chap02Narration1 extends JFrame {
 		next.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				chap02Narration1.this.dispose();
+				chap02Narration5.this.dispose();
 
 				String num = test.getText();
 				int stage2 = Integer.parseInt(num);
 				stage2++;
 
-				new chap02Narration2(name, stage2, lovePoint);
+				new chap02Talk1(name, stage2, lovePoint);
 			}
 		});
 
