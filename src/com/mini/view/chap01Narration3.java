@@ -42,7 +42,7 @@ public class chap01Narration3 extends JFrame {
 		pan.setBackground(b);
 
 		// 상단에 사람 이미지
-		Image personImg = new ImageIcon("image/나레이션2.jpg").getImage();
+		Image personImg = new ImageIcon("image/자리.jpg").getImage();
 		personImg.getScaledInstance(780, 300, Image.SCALE_SMOOTH);
 		JLabel person = new JLabel(new ImageIcon(personImg));
 
@@ -88,7 +88,7 @@ public class chap01Narration3 extends JFrame {
 
 		// 하단 대화 내용
 		JLabel talk = new JLabel(
-				"<html>얼마 후, 부장님이 소리치신다.<br> <br>부장님 : 자 신입사원들 ~ 각자의 사수들을 소개해줄게요 ~ <br>사수한테 잘 배우고 일 열심히 하도록!<br> <html>");
+				"<html>부장님 : "+name+ " 씨는 여기 앉도록 해! 이제 여기가 " +name+" 씨 자리야~!<br><html>");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 
@@ -149,7 +149,7 @@ public class chap01Narration3 extends JFrame {
 				int stage2 = Integer.parseInt(num);
 				stage2++;
 
-				new chap01Talk1(name, stage2, lovePoint);
+				new chap01Narration4(name, stage2, lovePoint);
 			}
 		});
 

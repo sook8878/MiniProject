@@ -17,13 +17,13 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class chap01Narration2 extends JFrame {
+public class chap01Narration4 extends JFrame {
 
-	public chap01Narration2() {
+	public chap01Narration4() {
 
 	}
 
-	public chap01Narration2(String name, int stage, int lovePoint) {
+	public chap01Narration4(String name, int stage, int lovePoint) {
 
 		// 프레임 설정
 		this.setSize(1000, 680);
@@ -88,7 +88,7 @@ public class chap01Narration2 extends JFrame {
 
 		// 하단 대화 내용
 		JLabel talk = new JLabel(
-				"<html>무사히 출근 완료... 이곳이 내가 일할 곳이구나 !! 생각보다 맘에 드는걸? <br><html>");
+				"<html>무사히 출근 후 자리배치를 받았지만<br><br>뭘 할지몰라 눈치만 보며 앉아있다... <br> <html>");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 
@@ -143,13 +143,13 @@ public class chap01Narration2 extends JFrame {
 
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				chap01Narration2.this.dispose();
+				chap01Narration4.this.dispose();
 
 				String num = test.getText();
 				int stage2 = Integer.parseInt(num);
 				stage2++;
 
-				new chap01Narration3(name, stage2, lovePoint);
+				new chap01Narration5(name, stage2, lovePoint);
 			}
 		});
 
