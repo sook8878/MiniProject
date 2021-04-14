@@ -1,6 +1,6 @@
 package com.mini.run;
 
-import com.mini.view.chap01Narration3;
+import com.mini.view.chap01Narration8;
 
 public class run {
 	public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class run {
 
 //		new chap01Talk1("user", 1, 1);
 		
-		new chap01Narration3("a",1,50);
+		new chap01Narration8("a",1,50);
 
 		
 	}

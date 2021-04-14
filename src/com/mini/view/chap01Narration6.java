@@ -88,7 +88,7 @@ public class chap01Narration6 extends JFrame {
 
 		// 하단 대화 내용
 		JLabel talk = new JLabel(
-				"<html>앗? 나를향해 걸어오는 저 선배...<br><br> 혹시 내가 대학생 시절 짝사랑 하던 선호선배!? <html>");
+				"<html>앗? 나를 향해 걸어오는 저 선배...<br><br> 혹시 내가 대학생 시절 짝사랑 하던 선호선배!? <html>");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 
