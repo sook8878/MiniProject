@@ -25,6 +25,7 @@ public class chap04Narration2 extends JFrame {
 
 	public chap04Narration2(String name, int stage, int lovePoint) {
 
+		JFrame jframe = this;
 		// 프레임 설정
 		this.setSize(1000, 680);
 		this.setTitle("시뮬레이션");
