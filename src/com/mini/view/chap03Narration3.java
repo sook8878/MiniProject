@@ -90,7 +90,7 @@ public class chap03Narration3 extends JFrame {
 		talkBackGround.setBounds(20, 335, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel("<html>선호 : 오늘 고생 많았어. 여기 맛있지? 내가 자주가는 맛집이야. <br><br> 어두워 졌네 집 이근처라고 했지? <br>집까지 대려다 줄께. </html>");
+		JLabel talk = new JLabel("<html>선호 : 오늘 고생 많았어. 여기 맛있지? 내가 자주가는 맛집이야. <br><br> 어두워 졌네, 집 이근처라고 했지? <br>집까지 대려다 줄께. </html>");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 33));
 

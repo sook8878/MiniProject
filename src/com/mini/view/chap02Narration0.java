@@ -45,12 +45,12 @@ public class chap02Narration0 extends JFrame {
 		pan.setBackground(b);
 
 		// 상단에 사람 이미지
-		Image personImg = new ImageIcon("image/나레이션1.png").getImage();
-		personImg.getScaledInstance(780, 300, Image.SCALE_SMOOTH);
+		Image personImg = new ImageIcon("image/김선호웃음움짤.gif").getImage();
+		personImg.getScaledInstance(780, 600, Image.SCALE_SMOOTH);
 		JLabel person = new JLabel(new ImageIcon(personImg));
 
 		// 상단의 이미지 크기, 위치 조정
-		person.setBounds(87, 20, 780, 300);
+		person.setBounds(87, 35, 780, 550);
 
 		String img = "";
 
@@ -82,23 +82,23 @@ public class chap02Narration0 extends JFrame {
 		closewords.setBounds(900, 0, 50, 50);
 
 		// 하단에 대화 테두리
-		Image talkBackGroundImg = new ImageIcon("image/bottom.png").getImage();
-		talkBackGroundImg.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
-		JLabel talkBackGround = new JLabel(new ImageIcon(talkBackGroundImg));
+//		Image talkBackGroundImg = new ImageIcon("image/bottom.png").getImage();
+	//	talkBackGroundImg.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
+		JLabel talkBackGround = new JLabel();
 
 		// 하단에 대화 테두리의 크기, 위치 조정
-		talkBackGround.setBounds(20, 335, 920, 270);
+		talkBackGround.setBounds(55, 380, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel("<html>챕터2 시작");
+		JLabel talk = new JLabel("<html>Chapter 2");
 		talk.setBounds(50, -50, 1000, 350);
-		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 50));
-
+		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 60));
+		talk.setForeground(Color.WHITE);
 		// 하단 대화 테두리의 대화라벨 추가
 		talkBackGround.add(talk);
 
 		// 하단 다음 이미지
-		Image nextImg = new ImageIcon("image/next.png").getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH);
+		Image nextImg = new ImageIcon("image/내래이션0용화살표.png").getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH);
 		JLabel next = new JLabel(new ImageIcon(nextImg));
 
 		Timer timer = new Timer();
@@ -107,7 +107,7 @@ public class chap02Narration0 extends JFrame {
 			@Override
 			public void run() {
 
-				next.setBounds(750, 150, 150, 80);
+				next.setBounds(790, 150, 150, 80);
 				talkBackGround.add(next);
 				jframe.repaint();
 
@@ -128,13 +128,13 @@ public class chap02Narration0 extends JFrame {
 		lovePointLabel.setVisible(false);
 
 		// panel에 추가
-		pan.add(person);
+		
 		pan.add(loveBar);
 		pan.add(closewords);
 		pan.add(talkBackGround);
 		pan.add(test);
 		pan.add(lovePointLabel);
-
+		pan.add(person);
 		// 하단 대화 테두리에 다음 이미지 추가
 		talkBackGround.add(next);
 
