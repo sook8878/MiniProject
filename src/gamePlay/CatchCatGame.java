@@ -335,7 +335,7 @@ public class CatchCatGame extends JFrame  {
 				}
 			
 			};
-			timerCreateButton.schedule(timerTask2, 0,590);
+			timerCreateButton.schedule(timerTask2, 0,750);
 			
 			// 1번째 치와와 
 			Timer timerChiwawaPlus = new Timer();
