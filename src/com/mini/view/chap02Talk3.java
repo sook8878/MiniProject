@@ -148,7 +148,7 @@ public class chap02Talk3 extends JFrame {
 				int stage2 = Integer.parseInt(num);
 				stage2++;
 				
-				new chap02Choice1(name, stage, lovePoint);
+				new chap02Choice1(name, stage2, lovePoint);
 			}
 		});
 

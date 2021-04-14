@@ -42,7 +42,7 @@ public class chap01Narration1 extends JFrame {
 		pan.setBackground(b);
 
 		// 상단에 사람 이미지
-		Image personImg = new ImageIcon("image/나레이션1.png").getImage();
+		Image personImg = new ImageIcon("image/움직도시.gif").getImage();
 		personImg.getScaledInstance(780, 300, Image.SCALE_SMOOTH);
 		JLabel person = new JLabel(new ImageIcon(personImg));
 
@@ -88,8 +88,7 @@ public class chap01Narration1 extends JFrame {
 
 		// 하단 대화 내용
 		JLabel talk = new JLabel(
-				"<html>대장정의 취준생 생활을 끝마치고 드디어 고대하던 입사 첫날...<br>" + "회사 출근 날 떨리는 마음으로 부서 사람들에게 첫인사를 드리는데...<br>"
-						+ "대학교 내내 혼자 짝사랑했던 선배를 마주쳤다...<br><br>" + "심지어 그 선배가 내 사수라니...!!!</html>");
+				"<html>대장정의 취준생 생활을 끝마치고 드디어 고대하던 입사 첫날...<br><html>" );
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 
@@ -150,7 +149,7 @@ public class chap01Narration1 extends JFrame {
 				int stage2 = Integer.parseInt(num);
 				stage2++;
 
-				new chap01Talk1(name, stage2, lovePoint);
+				new chap01Narration2(name, stage2, lovePoint);
 			}
 		});
 
