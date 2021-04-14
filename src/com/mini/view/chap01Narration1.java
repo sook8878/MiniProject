@@ -88,7 +88,7 @@ public class chap01Narration1 extends JFrame {
 
 		// 하단 대화 내용
 		JLabel talk = new JLabel(
-				"<html>대장정의 취준생 생활을 끝마치고 드디어 고대하던 입사 첫날...<br><html>" );
+				"<html>대장정의 취준생 생활을 끝마치고 드디어 고대하던 입사 첫날이다...<br><html>" );
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 
