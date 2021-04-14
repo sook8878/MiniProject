@@ -90,9 +90,7 @@ public class chap02Narration1 extends JFrame {
 		talkBackGround.setBounds(20, 335, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel("<html>선배는 더 내 마음에 들어왔고...<br>" + "선배의 마음을 확인할 방법은 없었다...<br>"
-				+ "직장 사수라는 이유로 혹시나 멀어지면 어색할까봐 쉽게 다가갈 수 없었다...<br>" + "그렇게 허송세월 하루하루만 진전 없이 시간만 가고있었는데...<br>"
-				+ "그러던 오늘! 부장님의 정년 퇴직으로  회사사람들과 송별회를 가지는 날!<br><br>" + "저녁 회식 자리에서!!!</html>");
+		JLabel talk = new JLabel("<html>회사 생활을 하면서 선배는 더 내 마음에 들어왔다...<br><br> 실수를 해서 부장님께 혼나면 위로해주는 선호 선배의 모습을보며<br><br> 대학시절 내가 왜 짝사랑 했는지 기억이 나는것 같다... ");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 
@@ -165,7 +163,7 @@ public class chap02Narration1 extends JFrame {
 				int stage2 = Integer.parseInt(num);
 				stage2++;
 
-				new chap02Talk1(name, stage2, lovePoint);
+				new chap02Narration2(name, stage2, lovePoint);
 			}
 		});
 

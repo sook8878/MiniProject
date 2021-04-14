@@ -4,6 +4,7 @@ package com.mini.view;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
@@ -61,39 +62,25 @@ public class SecondMain extends JFrame {
 		tf.setSize(300, 50);
 		tf.setFont(new Font("배달의민족 주아", Font.PLAIN, 20));
 
-//		// 이름 입력하고 엔터로 다음 클래스 호출하는 기능
-//		tf.addKeyListener(new KeyListener() {
-//
-//			@Override
-//			public void keyTyped(KeyEvent e) {
-//				// TODO Auto-generated method stub
-//
-//			}
-//
-//			@Override
-//			public void keyReleased(KeyEvent e) {
-//				// TODO Auto-generated method stub
-//
-//			}
-//
-//			// 이름 입력하지 않으면 안넘어감 , 입력하면 다음 화면으로 넘어감.
-//			@SuppressWarnings("unused")
-//			@Override
-//			public void keyPressed(KeyEvent e) {
-//
-//				if (tf.getText().length() != 0) {
-//					if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-//						//super.keyPressed(e);
-//						new UserController().saveUser(tf.getText());
-//						new chap01Narration1(tf.getText(), stage, lovePoint);
-//						setVisible(false);
-//					}
-//				} else {
-//					JOptionPane.showMessageDialog(null, "이름을 입력하세요");
-//				}
-//			}
-//		});
-
+		// 이름 입력하고 엔터로 다음 클래스 호출하는 기능
+		tf.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+					if(tf.getText().length() == 0) {
+						JOptionPane.showMessageDialog(null, "이름을 입력하세요");
+						tf.requestFocus();
+					}else {
+						//super.keyPressed(e);
+						new UserController().saveUser(tf.getText());
+						new chap01Narration1(tf.getText(), stage, lovePoint);
+						setVisible(false);
+					}
+				}
+			}
+		});
+		
+		
 		// 이름 입력해주세요 필드
 		JLabel text = new JLabel("이름을 입력해주세요");
 		text.setLocation(400, 410);
@@ -122,6 +109,7 @@ public class SecondMain extends JFrame {
 
 				} else {
 					JOptionPane.showMessageDialog(null, "이름을 입력하세요");
+					tf.requestFocus();
 				}
 
 			}

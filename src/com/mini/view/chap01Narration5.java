@@ -165,7 +165,7 @@ public class chap01Narration5 extends JFrame {
 				int stage2 = Integer.parseInt(num);
 				stage2++;
 
-				new chap01Talk1(name, stage2, lovePoint);
+				new chap01Narration6(name, stage2, lovePoint);
 			}
 		});
 
