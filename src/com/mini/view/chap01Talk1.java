@@ -27,7 +27,7 @@ public class chap01Talk1 extends JFrame {
 	}
 
 	public chap01Talk1(String name, int stage, int lovePoint) {
-
+		JFrame jframe = this;
 		// 프레임 설정
 		this.setSize(1000, 680);
 		this.setTitle("시뮬레이션");
@@ -101,23 +101,21 @@ public class chap01Talk1 extends JFrame {
 		Image nextImg = new ImageIcon("image/next.png").getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH);
 		JLabel next = new JLabel(new ImageIcon(nextImg));
 
-//		// 하단 다음 이미지의 크기, 위치 조정
-		next.setBounds(750, 150, 150, 80);
+		Timer timer = new Timer();
+		TimerTask timerTask = new TimerTask() {
 
-//		Timer timer = new Timer();
-//		TimerTask timerTask = new TimerTask() {
-//
-//			@Override
-//			public void run() {
-//				
-//				next.setBounds(750, 150, 150, 80);
-//				talkBackGround.add(next);
-//				System.out.println("==");
-//
-//			}
-//		};
-//
-//		timer.schedule(timerTask, 7000);
+			@Override
+			public void run() {
+				
+				next.setBounds(750, 150, 150, 80);
+				talkBackGround.add(next);
+				jframe.repaint();
+				System.out.println("==");
+
+			}
+		};
+
+		timer.schedule(timerTask, 1000);
 
 		// 매개변수로 전달받은 스테이지 번호를 넘겨주기 위한 작업
 		String stageNum = String.valueOf(stage);
@@ -136,9 +134,6 @@ public class chap01Talk1 extends JFrame {
 		pan.add(talkBackGround);
 		pan.add(test);
 		pan.add(lovePointLabel);
-
-//		// 하단 대화 테두리에 다음 이미지 추가
-		talkBackGround.add(next);
 
 		// 프레임 판넬 추가
 		this.add(pan, "Center");
