@@ -50,7 +50,7 @@ public class chap04Talk1 extends JFrame {
 		JLabel person = new JLabel(new ImageIcon(personImg));
 
 		// 상단의 이미지 크기, 위치 조정
-		person.setBounds(87, 30, 800, 300);
+		person.setBounds(87, 20, 780, 300);
 		
 		String img = "";
 

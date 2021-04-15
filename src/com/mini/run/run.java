@@ -1,11 +1,11 @@
 package com.mini.run;
 
-import com.mini.view.FristMain;
+import com.mini.view.happyEnd;
 
 public class run {
 	public static void main(String[] args) {
 		
-		new FristMain();
+		new happyEnd("주영",1,2);
 
 
 
