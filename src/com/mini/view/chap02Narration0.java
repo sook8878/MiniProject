@@ -45,7 +45,7 @@ public class chap02Narration0 extends JFrame {
 		pan.setBackground(b);
 
 		// 상단에 사람 이미지
-		Image personImg = new ImageIcon("image/선호웃음.png").getImage();
+		Image personImg = new ImageIcon("image/김선호웃음움짤.gif").getImage();
 		personImg.getScaledInstance(780, 600, Image.SCALE_SMOOTH);
 		JLabel person = new JLabel(new ImageIcon(personImg));
 
