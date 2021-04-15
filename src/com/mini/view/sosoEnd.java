@@ -47,7 +47,7 @@ public class sosoEnd extends JFrame {
 		pan.setBackground(b);
 
 		// 상단에 사람 이미지
-		Image personImg = new ImageIcon("image/김선호.png").getImage();
+		Image personImg = new ImageIcon("image/soso엔딩.gif").getImage();
 		personImg.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
 		JLabel person = new JLabel(new ImageIcon(personImg));
 
@@ -70,9 +70,7 @@ public class sosoEnd extends JFrame {
 		talkBackGround.setBounds(20, 340, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel("<html>선호 : 어.. 조금 당황스럽네...<br>"
-				+ "지금 사귀는 사람이 있어서...<br>"
-				+ "우리 지금처럼 좋은 선후배 사이로 지내자</html>");
+		JLabel talk = new JLabel("<html>선호 : 어.. 조금 선넘네?<br>"+"우리 지금처럼 선후배 사이로 지내자</html>");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 

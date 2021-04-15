@@ -47,7 +47,7 @@ public class happyEnd extends JFrame {
 		pan.setBackground(b);
 
 		// 상단에 사람 이미지
-		Image personImg = new ImageIcon("image/김선호.png").getImage();
+		Image personImg = new ImageIcon("image/선호해피엔딩.gif").getImage();
 		personImg.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
 		JLabel person = new JLabel(new ImageIcon(personImg));
 
@@ -70,8 +70,7 @@ public class happyEnd extends JFrame {
 		talkBackGround.setBounds(20, 340, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel("<html>선호 :  실은.. 나도 오래전부터 널 좋아했어<br>" + "내가 먼저 고백했어야 했는데.. 말 해줘서 고마워 ㅎㅎ<br>"
-				+ "우리 그럼 오늘부터 1일인거다? (포옹)</html>");
+		JLabel talk = new JLabel("<html>선호 :  나도 언젠가부터 너가 내 마음에 들어왔어<br> 종아해 " + name +" 아...</html>");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 

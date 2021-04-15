@@ -49,7 +49,7 @@ public class badEnd extends JFrame {
 		pan.setBackground(b);
 
 		// 상단에 사람 이미지
-		Image personImg = new ImageIcon("image/김선호.png").getImage();
+		Image personImg = new ImageIcon("image/선호배드엔딩.jpg").getImage();
 		personImg.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
 		JLabel person = new JLabel(new ImageIcon(personImg));
 
