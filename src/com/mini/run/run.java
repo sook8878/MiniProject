@@ -1,12 +1,11 @@
 package com.mini.run;
 
-import com.mini.view.chap04Talk5;
-import com.mini.view.happyEnd;
+import com.mini.view.badEnd;
 
 public class run {
 	public static void main(String[] args) {
 		
 //		new FristMain();
-		new chap04Talk5("a", 1, 0);
+		new badEnd("a", 1, 0);
 	}
 }

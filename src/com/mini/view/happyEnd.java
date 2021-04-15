@@ -52,7 +52,7 @@ public class happyEnd extends JFrame {
 		JLabel person = new JLabel(new ImageIcon(personImg));
 
 		// 상단의 이미지 크기, 위치 조정
-		person.setBounds(5, 20, 1000, 300);
+		person.setBounds(5, 20, 930, 300);
 
 		// 상단 오른쪽 프로그램 종료 버튼
 		Image closeImg = new ImageIcon("image/close.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
