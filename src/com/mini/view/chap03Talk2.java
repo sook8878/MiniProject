@@ -45,7 +45,7 @@ public class chap03Talk2 extends JFrame {
 		pan.setBackground(b);
 
 		// 상단에 사람 이미지
-		Image personImg = new ImageIcon("image/smile_night.jpg").getImage();
+		Image personImg = new ImageIcon("image/선호집.jpg").getImage();
 		personImg.getScaledInstance(780, 300, Image.SCALE_SMOOTH);
 		JLabel person = new JLabel(new ImageIcon(personImg));
 

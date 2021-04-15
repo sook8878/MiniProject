@@ -52,7 +52,7 @@ public class happyEnd extends JFrame {
 		JLabel person = new JLabel(new ImageIcon(personImg));
 
 		// 상단의 이미지 크기, 위치 조정
-		person.setBounds(5, 20, 930, 300);
+		person.setBounds(87, 20, 780, 300);
 
 		// 상단 오른쪽 프로그램 종료 버튼
 		Image closeImg = new ImageIcon("image/close.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
@@ -70,7 +70,7 @@ public class happyEnd extends JFrame {
 		talkBackGround.setBounds(20, 340, 920, 270);
 
 		// 하단 대화 내용
-		JLabel talk = new JLabel("<html>선호 :  나도 언젠가부터 너가 내 마음에 들어왔어<br> 종아해 " + name +" 아...</html>");
+		JLabel talk = new JLabel("<html>선호 :  나도 언젠가부터 너가 내 마음에 들어왔어<br> 좋아해 " + name +"아</html>");
 		talk.setBounds(50, -50, 1000, 350);
 		talk.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 
